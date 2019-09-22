@@ -11,7 +11,7 @@ someOtherfoler/
 *.exe
 *.o
 *.so
-
+*.lock
 *.so
 
 # Packages #
