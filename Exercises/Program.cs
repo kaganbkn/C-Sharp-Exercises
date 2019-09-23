@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Arrays
 {
@@ -25,6 +26,17 @@ namespace Arrays
             
             //////
 
+            //byte[] byteArray = File.ReadAllBytes("C:\\");
+
+            //////
+            /// 
+            Random random=new Random();
+            Console.WriteLine("Random Number --> " + random.Next(1,100));
+
+            //////
+            /// 
+            var matrix =new int[2, 2];
+            matrix=new int[,]{{1,2},{3,4}};
 
 
             Console.ReadLine();
