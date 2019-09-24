@@ -13,6 +13,10 @@ someOtherfoler/
 *.so
 *.lock
 *.so
+*.pdb
+*.props
+*.cache
+*.ide
 
 # Packages #
 ############
