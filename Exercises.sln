@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List", "List\List.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "async, await", "async, await\async, await.csproj", "{92C42D08-7C71-4A02-8474-7DCF008F2BDC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F7842AE8-2B0F-442E-9E54-92CDE863C382}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{266A696C-4D90-40A9-AA40-2FE75DF52858} = {F7842AE8-2B0F-442E-9E54-92CDE863C382}
+		{6F2736EA-81EF-4FB0-A501-91A93FA7664B} = {F7842AE8-2B0F-442E-9E54-92CDE863C382}
+		{92C42D08-7C71-4A02-8474-7DCF008F2BDC} = {F7842AE8-2B0F-442E-9E54-92CDE863C382}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}
