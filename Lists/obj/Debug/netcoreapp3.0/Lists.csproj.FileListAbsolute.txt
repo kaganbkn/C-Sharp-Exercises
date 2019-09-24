@@ -1,0 +1,11 @@
+C:\Workspace\local\C-Sharp-Exercises\Lists\bin\Debug\netcoreapp3.0\Lists.exe
+C:\Workspace\local\C-Sharp-Exercises\Lists\bin\Debug\netcoreapp3.0\Lists.deps.json
+C:\Workspace\local\C-Sharp-Exercises\Lists\bin\Debug\netcoreapp3.0\Lists.runtimeconfig.json
+C:\Workspace\local\C-Sharp-Exercises\Lists\bin\Debug\netcoreapp3.0\Lists.runtimeconfig.dev.json
+C:\Workspace\local\C-Sharp-Exercises\Lists\bin\Debug\netcoreapp3.0\Lists.dll
+C:\Workspace\local\C-Sharp-Exercises\Lists\bin\Debug\netcoreapp3.0\Lists.pdb
+C:\Workspace\local\C-Sharp-Exercises\Lists\obj\Debug\netcoreapp3.0\Lists.csprojAssemblyReference.cache
+C:\Workspace\local\C-Sharp-Exercises\Lists\obj\Debug\netcoreapp3.0\Lists.AssemblyInfoInputs.cache
+C:\Workspace\local\C-Sharp-Exercises\Lists\obj\Debug\netcoreapp3.0\Lists.AssemblyInfo.cs
+C:\Workspace\local\C-Sharp-Exercises\Lists\obj\Debug\netcoreapp3.0\Lists.dll
+C:\Workspace\local\C-Sharp-Exercises\Lists\obj\Debug\netcoreapp3.0\Lists.pdb

@@ -1,0 +1,11 @@
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\bin\Debug\netcoreapp3.0\Async-Await.exe
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\bin\Debug\netcoreapp3.0\Async-Await.deps.json
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\bin\Debug\netcoreapp3.0\Async-Await.runtimeconfig.json
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\bin\Debug\netcoreapp3.0\Async-Await.runtimeconfig.dev.json
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\bin\Debug\netcoreapp3.0\Async-Await.dll
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\bin\Debug\netcoreapp3.0\Async-Await.pdb
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\obj\Debug\netcoreapp3.0\Async-Await.csprojAssemblyReference.cache
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\obj\Debug\netcoreapp3.0\Async-Await.AssemblyInfoInputs.cache
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\obj\Debug\netcoreapp3.0\Async-Await.AssemblyInfo.cs
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\obj\Debug\netcoreapp3.0\Async-Await.dll
+C:\Workspace\local\C-Sharp-Exercises\Async-Await\obj\Debug\netcoreapp3.0\Async-Await.pdb

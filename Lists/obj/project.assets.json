@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\local\\C-Sharp-Exercises\\Exercises\\Arrays.csproj",
-      "projectName": "Arrays",
-      "projectPath": "C:\\Workspace\\local\\C-Sharp-Exercises\\Exercises\\Arrays.csproj",
+      "projectUniqueName": "C:\\Workspace\\local\\C-Sharp-Exercises\\Lists\\Lists.csproj",
+      "projectName": "Lists",
+      "projectPath": "C:\\Workspace\\local\\C-Sharp-Exercises\\Lists\\Lists.csproj",
       "packagesPath": "C:\\Users\\kagan.beken\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\local\\C-Sharp-Exercises\\Exercises\\obj\\",
+      "outputPath": "C:\\Workspace\\local\\C-Sharp-Exercises\\Lists\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
