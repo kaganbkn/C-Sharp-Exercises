@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Async_Await
@@ -8,6 +9,7 @@ namespace Async_Await
     {
         static void Main(string[] args)
         {
+
             for(int i = 0; i < 10; i++)
             {
                 SumNegative(i);

@@ -1,0 +1,11 @@
+C:\Workspace\C#\C-Sharp-Exercises\Async2\bin\Debug\netcoreapp3.0\Async2.exe
+C:\Workspace\C#\C-Sharp-Exercises\Async2\bin\Debug\netcoreapp3.0\Async2.deps.json
+C:\Workspace\C#\C-Sharp-Exercises\Async2\bin\Debug\netcoreapp3.0\Async2.runtimeconfig.json
+C:\Workspace\C#\C-Sharp-Exercises\Async2\bin\Debug\netcoreapp3.0\Async2.runtimeconfig.dev.json
+C:\Workspace\C#\C-Sharp-Exercises\Async2\bin\Debug\netcoreapp3.0\Async2.dll
+C:\Workspace\C#\C-Sharp-Exercises\Async2\bin\Debug\netcoreapp3.0\Async2.pdb
+C:\Workspace\C#\C-Sharp-Exercises\Async2\obj\Debug\netcoreapp3.0\Async2.csprojAssemblyReference.cache
+C:\Workspace\C#\C-Sharp-Exercises\Async2\obj\Debug\netcoreapp3.0\Async2.AssemblyInfoInputs.cache
+C:\Workspace\C#\C-Sharp-Exercises\Async2\obj\Debug\netcoreapp3.0\Async2.AssemblyInfo.cs
+C:\Workspace\C#\C-Sharp-Exercises\Async2\obj\Debug\netcoreapp3.0\Async2.dll
+C:\Workspace\C#\C-Sharp-Exercises\Async2\obj\Debug\netcoreapp3.0\Async2.pdb
