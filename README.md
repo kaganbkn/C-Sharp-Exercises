@@ -4,6 +4,7 @@
 ##### https://www.c-sharpcorner.com/article/async-and-await-in-c-sharp/
 ##### https://www.dotnetperls.com
 ##### https://medium.com/swlh/effective-dictionary-usage-c-avoid-if-statements-80595aac68d5
+##### Cancellation Token : https://www.buraksenyurt.com/post/Task-Iptal-Islemlerinin-Izlenmesi(Monitoring-Cancellation)
 
 --------------
 string builder
