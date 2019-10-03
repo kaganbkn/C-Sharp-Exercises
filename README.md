@@ -11,6 +11,7 @@
 string builder
 delegate
 callback function
+DP-singleton
 
 ----------------
 
