@@ -18,13 +18,20 @@ namespace Dicts
             {
                 Console.WriteLine($"This is 99 : {dict["a"]}");
             }
-            Console.WriteLine(dict.TryGetValue("a",out int test)); //out is must //int olmasının sebebi value int!!
+            Console.WriteLine(dict.TryGetValue("a",out int test)); //out is must //int olmasının sebebi dicts value int!!
             Console.WriteLine(test);
             Console.WriteLine(dict.TryGetValue("c", out int test1)); //if is containing return value
             Console.WriteLine(test1);
+            foreach (var item in dict)
+            {
+                Console.WriteLine($"Key--> {item.Key} Value--> {item.Value}");
+            }
+            var list = new List<int>(dict.Values);
 
-
-
+            dict["a"] = 100;
+            dict.Remove("a");
+            Console.WriteLine(dict.Count);
+            dict.Clear();
             Console.Read();
         }
     }
