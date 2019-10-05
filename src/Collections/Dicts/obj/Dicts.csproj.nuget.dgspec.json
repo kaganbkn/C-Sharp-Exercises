@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Dicts\\Dicts.csproj": {}
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Dicts\\Dicts.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Dicts\\Dicts.csproj": {
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Dicts\\Dicts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Dicts\\Dicts.csproj",
+        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Dicts\\Dicts.csproj",
         "projectName": "Dicts",
-        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Dicts\\Dicts.csproj",
+        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Dicts\\Dicts.csproj",
         "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Dicts\\obj\\",
+        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Dicts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -9,3 +9,14 @@ C:\Workspace\C#\C-Sharp-Exercises\Basics\obj\Debug\netcoreapp3.0\Basics.Assembly
 C:\Workspace\C#\C-Sharp-Exercises\Basics\obj\Debug\netcoreapp3.0\Basics.dll
 C:\Workspace\C#\C-Sharp-Exercises\Basics\obj\Debug\netcoreapp3.0\Basics.pdb
 C:\Workspace\C#\C-Sharp-Exercises\Basics\obj\Debug\netcoreapp3.0\Basics.csprojAssemblyReference.cache
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\bin\Debug\netcoreapp3.0\Basics.exe
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\bin\Debug\netcoreapp3.0\Basics.deps.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\bin\Debug\netcoreapp3.0\Basics.runtimeconfig.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\bin\Debug\netcoreapp3.0\Basics.runtimeconfig.dev.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\bin\Debug\netcoreapp3.0\Basics.dll
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\bin\Debug\netcoreapp3.0\Basics.pdb
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\obj\Debug\netcoreapp3.0\Basics.csprojAssemblyReference.cache
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\obj\Debug\netcoreapp3.0\Basics.AssemblyInfoInputs.cache
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\obj\Debug\netcoreapp3.0\Basics.AssemblyInfo.cs
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\obj\Debug\netcoreapp3.0\Basics.dll
+C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Basics\obj\Debug\netcoreapp3.0\Basics.pdb

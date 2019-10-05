@@ -9,3 +9,14 @@ C:\Workspace\C#\C-Sharp-Exercises\Dicts\obj\Debug\netcoreapp3.0\Dicts.AssemblyIn
 C:\Workspace\C#\C-Sharp-Exercises\Dicts\obj\Debug\netcoreapp3.0\Dicts.AssemblyInfo.cs
 C:\Workspace\C#\C-Sharp-Exercises\Dicts\obj\Debug\netcoreapp3.0\Dicts.dll
 C:\Workspace\C#\C-Sharp-Exercises\Dicts\obj\Debug\netcoreapp3.0\Dicts.pdb
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\bin\Debug\netcoreapp3.0\Dicts.exe
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\bin\Debug\netcoreapp3.0\Dicts.deps.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\bin\Debug\netcoreapp3.0\Dicts.runtimeconfig.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\bin\Debug\netcoreapp3.0\Dicts.runtimeconfig.dev.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\bin\Debug\netcoreapp3.0\Dicts.dll
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\bin\Debug\netcoreapp3.0\Dicts.pdb
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\obj\Debug\netcoreapp3.0\Dicts.csprojAssemblyReference.cache
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\obj\Debug\netcoreapp3.0\Dicts.AssemblyInfoInputs.cache
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\obj\Debug\netcoreapp3.0\Dicts.AssemblyInfo.cs
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\obj\Debug\netcoreapp3.0\Dicts.dll
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Dicts\obj\Debug\netcoreapp3.0\Dicts.pdb

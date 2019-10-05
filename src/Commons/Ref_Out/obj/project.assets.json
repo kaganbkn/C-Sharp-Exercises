@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Ref_Out\\Ref_Out.csproj",
+      "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\Ref_Out.csproj",
       "projectName": "Ref_Out",
-      "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Ref_Out\\Ref_Out.csproj",
+      "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\Ref_Out.csproj",
       "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Ref_Out\\obj\\",
+      "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

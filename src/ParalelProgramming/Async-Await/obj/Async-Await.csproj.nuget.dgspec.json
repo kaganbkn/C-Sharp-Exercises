@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async-Await\\Async-Await.csproj": {}
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async-Await\\Async-Await.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async-Await\\Async-Await.csproj": {
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async-Await\\Async-Await.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async-Await\\Async-Await.csproj",
+        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async-Await\\Async-Await.csproj",
         "projectName": "Async-Await",
-        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async-Await\\Async-Await.csproj",
+        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async-Await\\Async-Await.csproj",
         "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async-Await\\obj\\",
+        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async-Await\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

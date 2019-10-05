@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Threads\\Threads.csproj": {}
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Threads\\Threads.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Threads\\Threads.csproj": {
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Threads\\Threads.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Threads\\Threads.csproj",
+        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Threads\\Threads.csproj",
         "projectName": "Threads",
-        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Threads\\Threads.csproj",
+        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Threads\\Threads.csproj",
         "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Threads\\obj\\",
+        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Threads\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Lists\\Lists.csproj": {}
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Lists\\Lists.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Lists\\Lists.csproj": {
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Lists\\Lists.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Lists\\Lists.csproj",
+        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Lists\\Lists.csproj",
         "projectName": "Lists",
-        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Lists\\Lists.csproj",
+        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Lists\\Lists.csproj",
         "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Lists\\obj\\",
+        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Collections\\Lists\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

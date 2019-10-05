@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async2\\Async2.csproj": {}
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async2\\Async2.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async2\\Async2.csproj": {
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async2\\Async2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async2\\Async2.csproj",
+        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async2\\Async2.csproj",
         "projectName": "Async2",
-        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async2\\Async2.csproj",
+        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async2\\Async2.csproj",
         "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Async2\\obj\\",
+        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\Async2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

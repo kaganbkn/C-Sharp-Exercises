@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\CancellationTokenExample\\CancellationTokenExample.csproj": {}
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\CancellationTokenExample\\CancellationTokenExample.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\CancellationTokenExample\\CancellationTokenExample.csproj": {
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\CancellationTokenExample\\CancellationTokenExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\CancellationTokenExample\\CancellationTokenExample.csproj",
+        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\CancellationTokenExample\\CancellationTokenExample.csproj",
         "projectName": "CancellationTokenExample",
-        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\CancellationTokenExample\\CancellationTokenExample.csproj",
+        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\CancellationTokenExample\\CancellationTokenExample.csproj",
         "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\CancellationTokenExample\\obj\\",
+        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\ParalelProgramming\\CancellationTokenExample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

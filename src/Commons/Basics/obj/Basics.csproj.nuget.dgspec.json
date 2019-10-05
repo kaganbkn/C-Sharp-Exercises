@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Basics\\Basics.csproj": {}
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Basics\\Basics.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\C#\\C-Sharp-Exercises\\Basics\\Basics.csproj": {
+    "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Basics\\Basics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Basics\\Basics.csproj",
+        "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Basics\\Basics.csproj",
         "projectName": "Basics",
-        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Basics\\Basics.csproj",
+        "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Basics\\Basics.csproj",
         "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\Basics\\obj\\",
+        "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Basics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
