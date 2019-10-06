@@ -1,0 +1,10 @@
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\bin\Debug\netcoreapp3.0\EnumerableExample.exe
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\bin\Debug\netcoreapp3.0\EnumerableExample.deps.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\bin\Debug\netcoreapp3.0\EnumerableExample.runtimeconfig.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\bin\Debug\netcoreapp3.0\EnumerableExample.runtimeconfig.dev.json
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\bin\Debug\netcoreapp3.0\EnumerableExample.dll
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\bin\Debug\netcoreapp3.0\EnumerableExample.pdb
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\obj\Debug\netcoreapp3.0\EnumerableExample.AssemblyInfoInputs.cache
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\obj\Debug\netcoreapp3.0\EnumerableExample.AssemblyInfo.cs
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\obj\Debug\netcoreapp3.0\EnumerableExample.dll
+C:\Workspace\C#\C-Sharp-Exercises\src\Collections\EnumerableExample\obj\Debug\netcoreapp3.0\EnumerableExample.pdb
