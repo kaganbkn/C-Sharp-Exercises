@@ -19,3 +19,13 @@ C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\Threads\obj\Debug\netco
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\Threads\obj\Debug\netcoreapp3.0\Threads.AssemblyInfo.cs
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\Threads\obj\Debug\netcoreapp3.0\Threads.dll
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\Threads\obj\Debug\netcoreapp3.0\Threads.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\bin\Debug\netcoreapp3.0\Threads.exe
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\bin\Debug\netcoreapp3.0\Threads.deps.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\bin\Debug\netcoreapp3.0\Threads.runtimeconfig.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\bin\Debug\netcoreapp3.0\Threads.runtimeconfig.dev.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\bin\Debug\netcoreapp3.0\Threads.dll
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\bin\Debug\netcoreapp3.0\Threads.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\obj\Debug\netcoreapp3.0\Threads.AssemblyInfoInputs.cache
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\obj\Debug\netcoreapp3.0\Threads.AssemblyInfo.cs
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\obj\Debug\netcoreapp3.0\Threads.dll
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Threads\obj\Debug\netcoreapp3.0\Threads.pdb

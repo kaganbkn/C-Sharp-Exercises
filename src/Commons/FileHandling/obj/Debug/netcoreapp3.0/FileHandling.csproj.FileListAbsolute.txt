@@ -9,3 +9,13 @@ C:\Workspace\C#\C-Sharp-Exercises\src\Commons\FileHandling\obj\Debug\netcoreapp3
 C:\Workspace\C#\C-Sharp-Exercises\src\Commons\FileHandling\obj\Debug\netcoreapp3.0\FileHandling.AssemblyInfo.cs
 C:\Workspace\C#\C-Sharp-Exercises\src\Commons\FileHandling\obj\Debug\netcoreapp3.0\FileHandling.dll
 C:\Workspace\C#\C-Sharp-Exercises\src\Commons\FileHandling\obj\Debug\netcoreapp3.0\FileHandling.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\bin\Debug\netcoreapp3.0\FileHandling.exe
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\bin\Debug\netcoreapp3.0\FileHandling.deps.json
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\bin\Debug\netcoreapp3.0\FileHandling.runtimeconfig.json
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\bin\Debug\netcoreapp3.0\FileHandling.runtimeconfig.dev.json
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\bin\Debug\netcoreapp3.0\FileHandling.dll
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\bin\Debug\netcoreapp3.0\FileHandling.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\obj\Debug\netcoreapp3.0\FileHandling.AssemblyInfoInputs.cache
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\obj\Debug\netcoreapp3.0\FileHandling.AssemblyInfo.cs
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\obj\Debug\netcoreapp3.0\FileHandling.dll
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\FileHandling\obj\Debug\netcoreapp3.0\FileHandling.pdb

@@ -4,8 +4,54 @@ namespace Basics
 {
     public class Program
     {
+
+        static string _name;
+        static string Name
+        {
+            get
+            {
+                return _name ?? "Default";
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+
+        static int getTextLength(string text)
+        {
+            if (text?.Length > 1)
+            {
+                return text.Length;
+            }
+
+            return 0;
+        }
+        static int getTextLength1(string text)
+        {
+            return text?.Length > 1 ? text.Length : 0;
+        }
+        static string getTextLength2(string text)
+        {
+            return text ?? "Default";
+        }
         static void Main(string[] args)
         {
+
+            Console.WriteLine(Name);
+            Name = "Perls";
+            Console.WriteLine(Name);
+            Name = null;
+            Console.WriteLine(Name);
+
+            Console.WriteLine(getTextLength(null));
+            Console.WriteLine(getTextLength("Hello"));
+            Console.WriteLine(getTextLength1(null));
+            Console.WriteLine(getTextLength2(null));
+
+
+            /////////////
+
 
             var obj = new Two(10);
 
@@ -37,6 +83,17 @@ namespace Basics
                 Console.WriteLine("From Finally");
             }
 
+        }
+    }
+
+    public class Three
+    {
+        static string _name;
+
+        public static string Name
+        {
+            get { return _name ?? "Default"; }
+            set { _name = value; }
         }
     }
 

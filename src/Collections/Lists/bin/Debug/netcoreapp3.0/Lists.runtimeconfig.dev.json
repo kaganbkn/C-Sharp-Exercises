@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\kagan\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\kagan\\.nuget\\packages",
+      "C:\\Users\\kagan.beken\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\kagan.beken\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }

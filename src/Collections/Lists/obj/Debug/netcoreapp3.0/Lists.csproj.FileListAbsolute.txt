@@ -20,3 +20,13 @@ C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Lists\obj\Debug\netcoreapp3.0\
 C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Lists\obj\Debug\netcoreapp3.0\Lists.AssemblyInfo.cs
 C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Lists\obj\Debug\netcoreapp3.0\Lists.dll
 C:\Workspace\C#\C-Sharp-Exercises\src\Collections\Lists\obj\Debug\netcoreapp3.0\Lists.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\bin\Debug\netcoreapp3.0\Lists.exe
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\bin\Debug\netcoreapp3.0\Lists.deps.json
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\bin\Debug\netcoreapp3.0\Lists.runtimeconfig.json
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\bin\Debug\netcoreapp3.0\Lists.runtimeconfig.dev.json
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\bin\Debug\netcoreapp3.0\Lists.dll
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\bin\Debug\netcoreapp3.0\Lists.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\obj\Debug\netcoreapp3.0\Lists.AssemblyInfoInputs.cache
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\obj\Debug\netcoreapp3.0\Lists.AssemblyInfo.cs
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\obj\Debug\netcoreapp3.0\Lists.dll
+C:\Workspace\local\C-Sharp-Exercises\src\Collections\Lists\obj\Debug\netcoreapp3.0\Lists.pdb

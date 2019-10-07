@@ -20,3 +20,14 @@ C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcor
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcoreapp3.0\Async2.AssemblyInfo.cs
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcoreapp3.0\Async2.dll
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcoreapp3.0\Async2.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\bin\Debug\netcoreapp3.0\Async2.exe
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\bin\Debug\netcoreapp3.0\Async2.deps.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\bin\Debug\netcoreapp3.0\Async2.runtimeconfig.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\bin\Debug\netcoreapp3.0\Async2.runtimeconfig.dev.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\bin\Debug\netcoreapp3.0\Async2.dll
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\bin\Debug\netcoreapp3.0\Async2.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcoreapp3.0\Async2.csprojAssemblyReference.cache
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcoreapp3.0\Async2.AssemblyInfoInputs.cache
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcoreapp3.0\Async2.AssemblyInfo.cs
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcoreapp3.0\Async2.dll
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\Async2\obj\Debug\netcoreapp3.0\Async2.pdb

@@ -9,3 +9,13 @@ C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Enum\obj\Debug\netcoreapp3.0\Enum.
 C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Enum\obj\Debug\netcoreapp3.0\Enum.dll
 C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Enum\obj\Debug\netcoreapp3.0\Enum.pdb
 C:\Workspace\C#\C-Sharp-Exercises\src\Commons\Enum\obj\Debug\netcoreapp3.0\Enum.csprojAssemblyReference.cache
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\bin\Debug\netcoreapp3.0\Enum.exe
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\bin\Debug\netcoreapp3.0\Enum.deps.json
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\bin\Debug\netcoreapp3.0\Enum.runtimeconfig.json
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\bin\Debug\netcoreapp3.0\Enum.runtimeconfig.dev.json
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\bin\Debug\netcoreapp3.0\Enum.dll
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\bin\Debug\netcoreapp3.0\Enum.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\obj\Debug\netcoreapp3.0\Enum.AssemblyInfoInputs.cache
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\obj\Debug\netcoreapp3.0\Enum.AssemblyInfo.cs
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\obj\Debug\netcoreapp3.0\Enum.dll
+C:\Workspace\local\C-Sharp-Exercises\src\Commons\Enum\obj\Debug\netcoreapp3.0\Enum.pdb

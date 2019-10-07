@@ -20,3 +20,14 @@ C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExampl
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\obj\Debug\netcoreapp3.0\CancellationTokenExample.AssemblyInfo.cs
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\obj\Debug\netcoreapp3.0\CancellationTokenExample.dll
 C:\Workspace\C#\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\obj\Debug\netcoreapp3.0\CancellationTokenExample.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\bin\Debug\netcoreapp3.0\CancellationTokenExample.exe
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\bin\Debug\netcoreapp3.0\CancellationTokenExample.deps.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\bin\Debug\netcoreapp3.0\CancellationTokenExample.runtimeconfig.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\bin\Debug\netcoreapp3.0\CancellationTokenExample.runtimeconfig.dev.json
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\bin\Debug\netcoreapp3.0\CancellationTokenExample.dll
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\bin\Debug\netcoreapp3.0\CancellationTokenExample.pdb
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\obj\Debug\netcoreapp3.0\CancellationTokenExample.csprojAssemblyReference.cache
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\obj\Debug\netcoreapp3.0\CancellationTokenExample.AssemblyInfoInputs.cache
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\obj\Debug\netcoreapp3.0\CancellationTokenExample.AssemblyInfo.cs
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\obj\Debug\netcoreapp3.0\CancellationTokenExample.dll
+C:\Workspace\local\C-Sharp-Exercises\src\ParalelProgramming\CancellationTokenExample\obj\Debug\netcoreapp3.0\CancellationTokenExample.pdb
