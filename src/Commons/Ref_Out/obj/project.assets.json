@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kagan\\.nuget\\packages\\": {},
+    "C:\\Users\\kagan.beken\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\Ref_Out.csproj",
+      "projectUniqueName": "C:\\Workspace\\local\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\Ref_Out.csproj",
       "projectName": "Ref_Out",
-      "projectPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\Ref_Out.csproj",
-      "packagesPath": "C:\\Users\\kagan\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\C#\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\obj\\",
+      "projectPath": "C:\\Workspace\\local\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\Ref_Out.csproj",
+      "packagesPath": "C:\\Users\\kagan.beken\\.nuget\\packages\\",
+      "outputPath": "C:\\Workspace\\local\\C-Sharp-Exercises\\src\\Commons\\Ref_Out\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\kagan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kagan.beken\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -32,7 +32,12 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "http://horizon/SestekNugetDev/nuget": {},
+        "http://horizon/SestekNugetExt/nuget": {},
+        "http://horizon/SestekNugetProd/nuget": {},
+        "http://horizon/sesteknugetprerelease/nuget": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/abp-commercial/auth/e74f0510-6a1e-49e7-b073-1719647baccc/api/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
