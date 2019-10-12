@@ -35,9 +35,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileHandling", "src\Commons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumerableExample", "src\Collections\EnumerableExample\EnumerableExample.csproj", "{5536AC49-3F0F-47FE-B416-89700CD277E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "src\Commons\Polymorphism\Polymorphism.csproj", "{6ED20BF3-7C26-476E-8982-A80D30A41D70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphism", "src\Commons\Polymorphism\Polymorphism.csproj", "{6ED20BF3-7C26-476E-8982-A80D30A41D70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KVPair", "src\Collections\KVPair\KVPair.csproj", "{9BB2AD57-03B7-428B-88D4-A3CA6D319E47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVPair", "src\Collections\KVPair\KVPair.csproj", "{9BB2AD57-03B7-428B-88D4-A3CA6D319E47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LambdaExamples", "src\Commons\LambdaExamples\LambdaExamples.csproj", "{1A0141CD-38BE-4AA1-9AAC-52C5D4D7EF00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExamples", "src\Commons\LinqExamples\LinqExamples.csproj", "{FE6E8946-4E97-4FE5-820A-4B3A9F8A4638}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +105,14 @@ Global
 		{9BB2AD57-03B7-428B-88D4-A3CA6D319E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BB2AD57-03B7-428B-88D4-A3CA6D319E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BB2AD57-03B7-428B-88D4-A3CA6D319E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0141CD-38BE-4AA1-9AAC-52C5D4D7EF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0141CD-38BE-4AA1-9AAC-52C5D4D7EF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0141CD-38BE-4AA1-9AAC-52C5D4D7EF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0141CD-38BE-4AA1-9AAC-52C5D4D7EF00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE6E8946-4E97-4FE5-820A-4B3A9F8A4638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE6E8946-4E97-4FE5-820A-4B3A9F8A4638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE6E8946-4E97-4FE5-820A-4B3A9F8A4638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE6E8946-4E97-4FE5-820A-4B3A9F8A4638}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +135,8 @@ Global
 		{5536AC49-3F0F-47FE-B416-89700CD277E1} = {545997EC-BFE0-4369-B91B-6448EBF0E2F6}
 		{6ED20BF3-7C26-476E-8982-A80D30A41D70} = {9985C351-7429-4A30-AA1D-D993F601F913}
 		{9BB2AD57-03B7-428B-88D4-A3CA6D319E47} = {545997EC-BFE0-4369-B91B-6448EBF0E2F6}
+		{1A0141CD-38BE-4AA1-9AAC-52C5D4D7EF00} = {9985C351-7429-4A30-AA1D-D993F601F913}
+		{FE6E8946-4E97-4FE5-820A-4B3A9F8A4638} = {9985C351-7429-4A30-AA1D-D993F601F913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}

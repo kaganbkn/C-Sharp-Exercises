@@ -8,33 +8,26 @@ namespace KVPair
     {
         static void Main(string[] args)
         {
-            args=new [] { "asd"};
+            var list = new List<KeyValuePair<string,int>>();
+            list.Add(new KeyValuePair<string, int>("one", 1));
 
-            foreach (var arg in args)
+            Dictionary<string, int> dict = new Dictionary<string, int>() { { "two", 2 } }; //return type is KV Pair for dictionary
+
+            foreach (var item in dict)
             {
-                Console.WriteLine($"Args : {arg}");
+                Console.WriteLine(item.Key + " " + item.Value+" "+item.GetType());
             }
 
-
-
-
-
-
-
-
-
-
-            var number = new List<KeyValuePair<string,int>>();
-            var obj=new Program();
-            //obj.Write();
-
+            //////// Index Of
+            ///
+            var temp = "Hello World!";
+            if (temp.IndexOf("Mars") == -1) //if contains
+            {
+                Console.WriteLine("Not containing...");
+            }
+            Console.WriteLine(temp.IndexOf("World"));
 
             Console.Read();
-        }
-
-        public void Write()
-        {
-            Console.WriteLine("ads");
         }
     }
 }
