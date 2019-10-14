@@ -73,6 +73,43 @@ namespace LinqExamples
                 Console.Write(item.Key+",");
             }
 
+            // "Intersect"
+            Console.WriteLine("\nIntersect : ");
+            foreach (var item in array.Intersect(array111))
+            {
+                Console.Write(item+",");
+            }
+
+            Console.WriteLine("\nLast : "+array.Last());
+            Console.WriteLine("Max : " + array.Max());
+
+            // "Skip" "Take" same usage
+            Console.WriteLine("\nSkipWhile : ");
+            foreach (var item in array.SkipWhile(a=>a<3))
+            {
+                Console.Write(item+",");
+            }
+
+            Console.WriteLine("\nSkip : ");
+            foreach (var item in array.Skip(3))
+            {
+                Console.Write(item + ",");
+            }
+
+            // "Select"
+            Console.WriteLine("\nSelect : ");
+            var temp = array1.Where(a => a == "from").Select(a => a.ToUpper()).ToArray();
+            var temp1 = array1.Where(a => a == "from").SelectMany(a => a.ToUpper()).ToArray();
+            Console.WriteLine("Select : "+temp[0]);
+            Console.WriteLine("SelectMany : "+temp1[0]);
+
+            // "Lookup" //the lookup is based on the key length.
+            Console.WriteLine("\nLookup : ");
+            var lookup = array1.ToLookup(a => a.Length);
+            foreach (var item in lookup[4])
+            {
+                Console.Write(item+",");
+            }
 
             Console.Read();
         }
