@@ -37,6 +37,30 @@ namespace Basics
         }
         static void Main(string[] args)
         {
+            // "TryParse"
+            const string number = "123456";
+            const string name = "kagan";
+            const string date = "12/05/19";
+            if (int.TryParse(number, out int numInt))
+            {
+                Console.WriteLine($"Parsed Number : {numInt}");
+            }
+
+            Console.WriteLine($"Parsed Number : {int.Parse(number)}");
+
+            if (DateTime.TryParse(date, out DateTime dateResult))
+            {
+                Console.WriteLine($"Parsed Date : {dateResult}");
+            }
+
+            int.TryParse(name, out int parsedName);
+
+            Console.WriteLine($"Parsed Name : {parsedName}");  // parsedName initialized default value
+
+
+            ///////
+            ///
+            /// 
 
             Console.WriteLine(Name);
             Name = "Perls";

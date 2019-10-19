@@ -111,6 +111,20 @@ namespace LinqExamples
                 Console.Write(item+",");
             }
 
+            // "Zip" 
+            Console.WriteLine("\nZip : ");
+            foreach (var item in array.Zip(array111,(a,b)=>a+b))
+            {
+                Console.Write(item + ",");
+            }
+
+            // "Union" 
+            Console.WriteLine("\nUnion : ");
+            foreach (var item in array.Union(array111))
+            {
+                Console.Write(item + ",");
+            }
+
             Console.Read();
         }
     }

@@ -31,6 +31,25 @@ namespace FileHandling
 
         static void Main(string[] args)
         {
+            // "Path"
+
+            string tempPath = Path.GetTempPath();
+            string tempName = Path.GetTempFileName();
+            Console.WriteLine("Full Path : "+Path.Combine(tempPath,tempName));
+
+            string path = "C:\\stagelist.txt";
+            string extension = Path.GetExtension(path);
+            string filename = Path.GetFileName(path);
+            string filenameNoExtension = Path.GetFileNameWithoutExtension(path);
+            string root = Path.GetPathRoot(path);
+
+            Console.WriteLine("{0}\n{1}\n{2}\n{3}",
+                extension,
+                filename,
+                filenameNoExtension,
+                root);
+
+            Console.Read();
             // WriteFile();
             // ReadLines();
 
