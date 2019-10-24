@@ -36,6 +36,7 @@ namespace Enum
 
 
             //bitwise
+            Console.WriteLine("Bitwise");
             var a = 'i';
             var b = a >> 1; //shift
             Console.WriteLine((char)b);
@@ -46,6 +47,37 @@ namespace Enum
             b = a & 'a';  //and
             Console.WriteLine((char)b);
             Console.WriteLine((decimal)b);
+
+
+
+            // "Switch-case"
+
+            switch (importance)
+            {
+                case Importance.None:
+                case Importance.After:
+                {
+                    Console.WriteLine("OK");
+                    break;
+                }
+                case Importance.Critical:
+                case Importance.Important:
+                {
+                    Console.WriteLine("NO");
+                    break;
+                }
+                default:
+                {
+                    Console.WriteLine("NO"); 
+                    break;
+                }
+            }
+
+            // "Tuple"
+
+            var tuple=new Tuple<int,string,bool>(3,"three",true);
+            var tuples=new Tuple<int, int, int>[2];
+            Console.WriteLine(tuple.Item1);
 
             Console.ReadLine();
         }
