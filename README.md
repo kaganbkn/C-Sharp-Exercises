@@ -5,8 +5,8 @@
 ##### https://www.dotnetperls.com
 ##### https://medium.com/swlh/effective-dictionary-usage-c-avoid-if-statements-80595aac68d5
 ##### Cancellation Token : https://www.buraksenyurt.com/post/Task-Iptal-Islemlerinin-Izlenmesi(Monitoring-Cancellation)
-#####                      https://johnthiriet.com/cancel-asynchronous-operation-in-csharp/#
-
+##### https://johnthiriet.com/cancel-asynchronous-operation-in-csharp/#
+##### https://www.buraksenyurt.com/post/C-Temelleri-Nitelikleri(Attributes)-Kavramak-bsenyurt-com-dan
 --------------
 string builder
 delegate
