@@ -53,6 +53,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Core", "src\.netC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Data", "src\.netCore\OdeToFood.Data\OdeToFood.Data.csproj", "{0FB02900-BA65-4D5C-97DE-DC9190E260A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeExamples", "src\Commons\AttributeExamples\AttributeExamples.csproj", "{B172769C-08EA-4630-B296-8ECFFC761E45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,10 @@ Global
 		{0FB02900-BA65-4D5C-97DE-DC9190E260A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FB02900-BA65-4D5C-97DE-DC9190E260A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FB02900-BA65-4D5C-97DE-DC9190E260A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B172769C-08EA-4630-B296-8ECFFC761E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B172769C-08EA-4630-B296-8ECFFC761E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B172769C-08EA-4630-B296-8ECFFC761E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B172769C-08EA-4630-B296-8ECFFC761E45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -168,6 +174,7 @@ Global
 		{8EA91AB3-E772-437F-A0E7-DCFE4DDCCC51} = {29024E51-5171-4CD8-B04C-5C9C55F6F228}
 		{A4B4A217-55B5-467B-AFC4-62F625AE43C6} = {29024E51-5171-4CD8-B04C-5C9C55F6F228}
 		{0FB02900-BA65-4D5C-97DE-DC9190E260A8} = {29024E51-5171-4CD8-B04C-5C9C55F6F228}
+		{B172769C-08EA-4630-B296-8ECFFC761E45} = {9985C351-7429-4A30-AA1D-D993F601F913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}
