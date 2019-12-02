@@ -1,0 +1,15 @@
+﻿@using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<ul>
+
+    @for (int i = 0; i < (int)ViewData["count"]; i++)
+    {
+        <li>@ViewData["message"]</li>
+    }
+
+</ul>
+<p>Hello from our View Template!</p>
