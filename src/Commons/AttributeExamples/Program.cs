@@ -11,7 +11,7 @@ namespace AttributeExamples
             B,
             C
         }
-        [AttributeUsage(AttributeTargets.Method)]
+        [AttributeUsage(AttributeTargets.Method)] //,AllowMultiple =true
         public class DeveloperInfo : Attribute
         {
             public Developers _developers { get; set; }
