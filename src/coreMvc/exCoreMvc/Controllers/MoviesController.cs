@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using exCoreMvc.Data;
 using exCoreMvc.Models;
+using Serilog;
 
 namespace exCoreMvc.Controllers
 {
@@ -20,9 +21,16 @@ namespace exCoreMvc.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Movies.ToListAsync());
+            var movies = from m in _context.Movies select m;
+
+            if (!String.IsNullOrWhiteSpace(searchString))
+            {
+                movies = movies.Where(m => m.Title.Contains(searchString));
+            }
+
+            return View(await movies.ToListAsync());
         }
 
         // GET: Movies/Details/5
@@ -56,6 +64,7 @@ namespace exCoreMvc.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Genre,Price,ReleaseDate")] Movie movie)
         {
+            Log.Information("Added new Movie : "+movie.Title);
             if (ModelState.IsValid)
             {
                 _context.Add(movie);
@@ -86,7 +95,7 @@ namespace exCoreMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Genre,Price,ReleaseDate")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Genre,Price,ReleaseDate")] Movie movie) //if its bind after we can change that.
         {
             if (id != movie.Id)
             {

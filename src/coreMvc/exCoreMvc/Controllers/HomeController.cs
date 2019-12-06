@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using exCoreMvc.Models;
+using Serilog;
 
 namespace exCoreMvc.Controllers
 {
@@ -20,6 +21,7 @@ namespace exCoreMvc.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("/index");
             return View();
         }
 
