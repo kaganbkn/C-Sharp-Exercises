@@ -19,5 +19,7 @@ namespace exCoreMvc.Models
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
 
+        public string Rating { get; set; }
+
     }
 }

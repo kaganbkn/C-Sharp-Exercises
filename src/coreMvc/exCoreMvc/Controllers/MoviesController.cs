@@ -21,16 +21,33 @@ namespace exCoreMvc.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string movieGenre, string searchString)
         {
-            var movies = from m in _context.Movies select m;
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Movies
+                orderby m.Genre
+                select m.Genre;
 
-            if (!String.IsNullOrWhiteSpace(searchString))
+            var movies = from m in _context.Movies
+                select m;
+
+            if (!string.IsNullOrEmpty(searchString))
             {
-                movies = movies.Where(m => m.Title.Contains(searchString));
+                movies = movies.Where(s => s.Title.Contains(searchString));
             }
 
-            return View(await movies.ToListAsync());
+            if (!string.IsNullOrEmpty(movieGenre))
+            {
+                movies = movies.Where(x => x.Genre == movieGenre);
+            }
+
+            var movieGenreVM = new MovieGenreViewModel
+            {
+                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Movies = await movies.ToListAsync()
+            };
+
+            return View(movieGenreVM);
         }
 
         // GET: Movies/Details/5
@@ -62,10 +79,10 @@ namespace exCoreMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Genre,Price,ReleaseDate")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,Genre,Price,ReleaseDate,Rating")] Movie movie)
         {
             Log.Information("Added new Movie : "+movie.Title);
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)  //arayüzdeki uyarıları ve attirubute lerin çalışmasını sağlayan kısım
             {
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
@@ -95,7 +112,7 @@ namespace exCoreMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Genre,Price,ReleaseDate")] Movie movie) //if its bind after we can change that.
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Genre,Price,ReleaseDate,Rating")] Movie movie) //if its bind after we can change that.
         {
             if (id != movie.Id)
             {
