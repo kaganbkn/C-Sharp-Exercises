@@ -37,6 +37,13 @@ namespace Basics
         }
         static void Main(string[] args)
         {
+
+            // "Random"
+
+            Random random = new Random();
+            Console.WriteLine(random.Next());
+            Console.WriteLine(random.Next(10,20));
+
             // "TryParse"
             const string number = "123456";
             const string name = "kagan";
