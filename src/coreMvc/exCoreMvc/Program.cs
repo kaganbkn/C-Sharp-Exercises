@@ -26,6 +26,7 @@ namespace exCoreMvc
                 .CreateLogger();
 
             var host = CreateHostBuilder(args).Build();
+            //service lifetime --> Singleton,Scoped,Transient
             using (var scope=host.Services.CreateScope()) //how is it working?
             {
                 var service = scope.ServiceProvider;

@@ -41,7 +41,6 @@ namespace Async_Await
             Console.ReadLine();
         }
 
-
         public static async Task SumNegative(int number)
         {
             var result=await Task.Run(() => GetSum(number)).ContinueWith(task => GetNegative(task));
