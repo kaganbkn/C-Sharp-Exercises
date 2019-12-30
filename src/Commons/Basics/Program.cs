@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Basics
 {
@@ -35,6 +37,23 @@ namespace Basics
         {
             return text ?? "Default";
         }
+
+
+        /// <summary>
+        /// ideal usage
+        private static string _car;
+
+        public static string Car
+        {
+            get
+            {
+                _car = "deneme";
+                return _car;
+            }
+        }
+
+        /// </summary>
+
         static void Main(string[] args)
         {
             // "TryParse"
@@ -56,7 +75,6 @@ namespace Basics
             int.TryParse(name, out int parsedName);
 
             Console.WriteLine($"Parsed Name : {parsedName}");  // parsedName initialized default value
-
 
             ///////
             ///
@@ -106,7 +124,6 @@ namespace Basics
             {
                 Console.WriteLine("From Finally");
             }
-
         }
     }
 

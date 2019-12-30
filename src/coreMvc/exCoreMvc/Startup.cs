@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using exCoreMvc.Data;
+using exCoreMvc.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 
 namespace exCoreMvc
 {
@@ -26,7 +30,7 @@ namespace exCoreMvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Azure")));
+            services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
 
         }
 
@@ -50,12 +54,34 @@ namespace exCoreMvc
 
             app.UseAuthorization();
 
+            app.Use(async (context,next)=>
+            {
+                Log.Information("Default Use Middleware.");
+                await next.Invoke();
+            });
+
+            app.Map("/mapExample",
+                b => b.Use(async (context, next) => { await context.Response.WriteAsync("MapExample middleware."); }));
+
+            //UseWhen
+            app.MapWhen(c=>c.Request.Query.ContainsKey("mapValue"),
+                b => b.Use(async (context, next) => { await context.Response.WriteAsync($"Middleware with value={context.Request.Query["mapValue"]}."); }));
+
+            app.UseWhen(b => b.Request.Path == new PathString("/daisy"), c => c.UseMiddleware<DaisyMiddleware>());
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+/* //Run method breaks the chain. We need to invoke next middleware
+            app.Run(async context =>
+            {
+                Log.Information("Default Run Middleware.");
+            });
+*/
         }
     }
 }
