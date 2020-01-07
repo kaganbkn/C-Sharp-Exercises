@@ -59,7 +59,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "coreMvc", "coreMvc", "{CB8D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exCoreMvc", "src\coreMvc\exCoreMvc\exCoreMvc.csproj", "{FC536FB3-B6DC-45FA-A90B-C8B6964F075E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexFull", "src\Commons\RegexFull\RegexFull.csproj", "{D31343F3-6BAA-41A0-AC68-F6D847CCFC53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexFull", "src\Commons\RegexFull\RegexFull.csproj", "{D31343F3-6BAA-41A0-AC68-F6D847CCFC53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documents", "documents", "{14D2B51A-A6C9-4E02-9356-38C5FCB8EB01}"
+	ProjectSection(SolutionItems) = preProject
+		documents\README.md = documents\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
