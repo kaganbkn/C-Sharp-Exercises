@@ -5,6 +5,8 @@ using System.Linq;
 
 namespace EnumerableExample
 {
+
+    ///// :  https://blog.usejournal.com/enumeration-in-net-d5674921512e
     class Program
     {
         static void Display(IEnumerable<int> array)  //We can pass them directly to methods that receive IEnumerable arguments.
@@ -44,8 +46,31 @@ namespace EnumerableExample
             {
                 Console.WriteLine(day);
             }
-            
+
+            printNumber(Enumerable.Range(2, 9));
+            Console.WriteLine();
+            printNumber1(new int[]{1,2,3});
+
             Console.Read();
+        }
+
+        public static void printNumber(IEnumerable<int> arrayNumber)
+        {
+            foreach (var item in arrayNumber)
+            {
+                Console.Write(item+" ");
+            }
+        }
+        public static void printNumber1(IEnumerable<int> enumerable)
+        {
+            using (var enumerator = enumerable.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                {
+                    var item = enumerator.Current;
+                    Console.Write(item+" ");
+                }
+            }
         }
     }
 }
