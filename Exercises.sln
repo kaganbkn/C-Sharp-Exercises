@@ -63,7 +63,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexFull", "src\Commons\Re
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documents", "documents", "{14D2B51A-A6C9-4E02-9356-38C5FCB8EB01}"
 	ProjectSection(SolutionItems) = preProject
-		documents\README.md = documents\README.md
+		documents\resources.md = documents\resources.md
 	EndProjectSection
 EndProject
 Global

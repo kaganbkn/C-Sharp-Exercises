@@ -11,6 +11,7 @@ namespace RegexFull
             Regex regex = new Regex("Hello");
 
             Console.WriteLine("Match : "+regex.Match("Hello World!"));
+
             Console.WriteLine("Ismatch : "+regex.IsMatch("Hello World!"));
             foreach (var item in regex.Matches("Hello World! Hello"))
             {
@@ -19,8 +20,16 @@ namespace RegexFull
 
             regex = new Regex("!$");
             Console.WriteLine("!$ : " + regex.IsMatch("Hello World!"));
+
             regex = new Regex("^H");
             Console.WriteLine("^H : " + regex.IsMatch("Hello World!"));
+
+            regex = new Regex("k.re");
+            foreach (var item in regex.Matches("kare,küre,kore,kere"))
+            {
+                Console.WriteLine("Matches . : " + item);
+            }
+
 
             Console.Read();
         }
