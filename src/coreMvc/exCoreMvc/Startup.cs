@@ -31,6 +31,7 @@ namespace exCoreMvc
         {
             services.AddControllersWithViews();
             services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
+            services.Configure<ConfigurationData>(c => Configuration.GetSection("Data").Bind(c));
 
         }
 
@@ -68,6 +69,8 @@ namespace exCoreMvc
                 b => b.Use(async (context, next) => { await context.Response.WriteAsync($"Middleware with value={context.Request.Query["mapValue"]}."); }));
 
             app.UseWhen(b => b.Request.Path == new PathString("/daisy"), c => c.UseMiddleware<DaisyMiddleware>());
+
+            app.UseWhen(b => b.Request.Path == new PathString("/configuration"), c => c.UseMiddleware<ConfigurationMiddleware>());
 
             app.UseEndpoints(endpoints =>
             {
