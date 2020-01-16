@@ -6,6 +6,29 @@ namespace Gneric
 {
     public class Program
     {
+        static void Swap<T>(ref T input1, ref T input2)
+        {
+            var temp = input2;
+            input2 = input1;
+            input1 = temp;
+        }
+        static void Swap1<T>(T input1, T input2)
+        {
+            var temp = input2;
+            input2 = input1;
+            input1 = temp;
+        }
+
+        static int AddSome(int a, out int b)
+        {
+            b = 5;
+            return a + b;
+        }
+
+        public static int AddTwo(int a )
+        {
+            return a + 2;
+        }
         public static void Main(string[] args)
         {
             MyGenericClass<int,string> obj=new MyGenericClass<int, string>(10);
@@ -23,6 +46,19 @@ namespace Gneric
             dict.Add(1, "One");
             dict.Add(2, "Two");
             dict.Add(3, "Three");
+
+            int first = 4;
+            int second = 5;
+
+            Swap<int>(ref first, ref second);
+            //Swap1<int>(first, second);
+            Console.WriteLine($"first : {first} , second : {second}");
+
+            var number = 3;
+            Console.WriteLine(AddTwo(number));
+
+            Console.WriteLine(AddSome(5, out int OutValue));
+            Console.WriteLine(OutValue);
 
             Console.Read();
         }

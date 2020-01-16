@@ -4,7 +4,7 @@ namespace Ref_Out
 {
     class Program
     {
-
+        //!!  NOTE : "out" and "ref" are referance types.
         /// <summary>
         /// out : metod içinde kullanılması gerek,initialize etmeye gerek yok
         /// ref : metod içinde kullanılması gerekmez,initialize etmemiz gerek
