@@ -7,6 +7,7 @@
 ##### Cancellation Token : https://www.buraksenyurt.com/post/Task-Iptal-Islemlerinin-Izlenmesi(Monitoring-Cancellation)
 ##### https://johnthiriet.com/cancel-asynchronous-operation-in-csharp/#
 ##### https://www.buraksenyurt.com/post/C-Temelleri-Nitelikleri(Attributes)-Kavramak-bsenyurt-com-dan
+##### Regex : https://ceaksan.com/tr/regex-regular-expressions-nedir/
 --------------
 string builder
 delegate
@@ -18,3 +19,8 @@ DP-singleton
 Process Explorer -- Thread Tracking
 
 Context Switching :  How many times thread is running
+
+
+- variable vs property : https://www.codeproject.com/Questions/646696/Difference-Between-variable-and-property
+- Constraints in Generics : https://www.tutorialsteacher.com/csharp/constraints-in-generic-csharp , https://www.hikmetokumus.com/makale/150/csharp-generic-tiplere-where-ile-kisitlama-getirmek---constraints-on-type-parameters
+- Value vs Referance Type : https://www.tutlane.com/tutorial/csharp/csharp-value-type-and-reference-type-with-examples

@@ -5,7 +5,7 @@ namespace RegexFull
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)  // Resource : https://ceaksan.com/tr/regex-regular-expressions-nedir/
         {
 
             Regex regex = new Regex("Hello");
@@ -24,12 +24,14 @@ namespace RegexFull
             regex = new Regex("^H");
             Console.WriteLine("^H : " + regex.IsMatch("Hello World!"));
 
+            var example = "kare,küre,kore,example";
             regex = new Regex("k.re");
-            foreach (var item in regex.Matches("kare,küre,kore,kere"))
+            foreach (var item in regex.Matches(example))
             {
                 Console.WriteLine("Matches . : " + item);
             }
 
+            Console.WriteLine(Regex.Replace(example, "k.re", "?"));
 
             Console.Read();
         }
