@@ -6,14 +6,16 @@ namespace Gneric
 {
     public class Program
     {
-        static void Swap<T>(ref T input1, ref T input2)
+        static void Swap<T>(ref T input1, ref T input2) where T :struct 
         {
             var temp = input2;
             input2 = input1;
             input1 = temp;
         }
-        static void Swap1<T>(T input1, T input2)
+        static void Swap1<T>(T input1, T input2) where T : class
         {
+            //var temp = default(T);
+
             var temp = input2;
             input2 = input1;
             input1 = temp;
@@ -44,14 +46,14 @@ namespace Gneric
 
             IDictionary<int, string> dict = new Dictionary<int, string>();
             dict.Add(1, "One");
-            dict.Add(2, "Two");
-            dict.Add(3, "Three");
 
             int first = 4;
             int second = 5;
+            string first1 = "a";
+            string second1= "b";
 
-            Swap<int>(ref first, ref second);
-            //Swap1<int>(first, second);
+            Swap<int>(ref first, ref second); // "out" and "ref" are referance types.
+            Swap1<string>(first1, second1);
             Console.WriteLine($"first : {first} , second : {second}");
 
             var number = 3;
