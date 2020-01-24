@@ -10,10 +10,11 @@ namespace Async2
         static Task<string> GetGoogleResource()
         {
             HttpClient httpClient = new HttpClient();
-            var t = Task.Run(() => {
+            var t = Task.Run(() =>
+            {
                 return httpClient.GetStringAsync("https://www.google.com").Result;  //result yazdığımız için sonucu bekliyor
             });
-            return t;   
+            return t;
         }
 
         static async Task<string> GetGoogleResourceAsync()
@@ -25,23 +26,38 @@ namespace Async2
         static async Task GetGoogleResourceAsync1()
         {
             HttpClient httpClient = new HttpClient();
-            var result= await httpClient.GetStringAsync("https://www.google.com");
+            var result = await httpClient.GetStringAsync("https://www.google.com");
             Console.WriteLine(result);
         }
 
         static void Main(string[] args)
         {
             var person = new Amount();
+
+            //person.balance = 50;
+
+            //var t1 = new Thread(thread1 => person.Withdraw(20));
+            //var t2 = new Thread(thread2 => person.Withdraw(20));
+            //var t3 = new Thread(thread3 => person.Withdraw(20));
+            //t1.Start();
+            //t2.Start();
+            //t3.Start();
+
             person.balance = 50;
+            var t11 = new Thread(thread1 => person.WithdrawWithoutLock(20));
+            var t21 = new Thread(thread2 => person.WithdrawWithoutLock(20));
+            var t31 = new Thread(thread3 => person.WithdrawWithoutLock(20));
+            t11.Start();
+            t21.Start();
+            t31.Start();
+            Console.WriteLine(t11.IsAlive);
 
-            var t1 = new Thread(thread1 => person.Withdraw(20));
-            var t2 = new Thread(thread2 => person.Withdraw(20));
-            var t3 = new Thread(thread3 => person.Withdraw(20));
-            t1.Start();
-            t2.Start();
-            t3.Start();
+            while (!(!t11.IsAlive && !t21.IsAlive && !t31.IsAlive))
+            {
+                Console.WriteLine("End Balance : "+person.balance);
+            }
 
-
+            Console.WriteLine("End Balance : " + person.balance);
             /////////////
             ///
 
@@ -52,7 +68,8 @@ namespace Async2
             /////////////
             ///
 
-            Task t = Task.Run(() => {
+            Task t = Task.Run(() =>
+            {
                 Console.WriteLine("Hello");
             });
             Thread.Sleep(1000);
@@ -77,11 +94,21 @@ namespace Async2
             {
                 if (amount > balance)
                 {
-                    throw new Exception("Insufficient funds");
+                    Console.WriteLine("Balance Exceed");
+                    //throw new Exception("Insufficient funds");
                 }
                 balance -= amount;
                 Console.WriteLine("New Balance : " + balance);
             }
+        }
+        public void WithdrawWithoutLock(decimal amount)  //this function is thread safe because we use "lock"
+        {
+            if (amount > balance)
+            {
+                throw new Exception("Insufficient funds");
+            }
+            balance -= amount;
+            Console.WriteLine("New Balance Without Lock : " + balance);
         }
     }
 }

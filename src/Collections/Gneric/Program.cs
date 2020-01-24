@@ -97,7 +97,7 @@ namespace Gneric
         public TKey genericProperty { get; set; }
     }
 
-    public class GenericClassTwo<T> where T: class   //class : let the referance types - struct : let the value types
+    public class GenericClassTwo<T> where T: class   //class : allow the referance types - struct : allow the value types
     {
         public T Text { get; set; }
 

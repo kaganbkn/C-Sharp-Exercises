@@ -9,7 +9,6 @@
 ##### https://www.buraksenyurt.com/post/C-Temelleri-Nitelikleri(Attributes)-Kavramak-bsenyurt-com-dan
 ##### Regex : https://ceaksan.com/tr/regex-regular-expressions-nedir/
 --------------
-string builder
 delegate
 callback function
 DP-singleton

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using Basics.Exceptions;
 
 namespace Basics
 {
@@ -61,7 +62,7 @@ namespace Basics
 
             Random random = new Random();
             Console.WriteLine(random.Next());
-            Console.WriteLine(random.Next(10,20));
+            Console.WriteLine(random.Next(10, 20));
 
             // "TryParse"
             const string number = "123456";
@@ -106,7 +107,7 @@ namespace Basics
 
             //////////////
             ///
-            
+
             foreach (var item in args)
             {
                 Console.WriteLine(item);
@@ -120,10 +121,18 @@ namespace Basics
 
             try
             {
-                var a = Convert.ToInt32(Console.ReadLine());
-                var temp = 30 / a;
+                int value = Convert.ToInt32(Console.ReadLine());
+                Divider(value);
             }
-            catch (Exception e)
+            catch (DivideByZeroException e)
+            {
+                throw new Exception(e.Message);
+            }
+            catch (ValueIsExceedException e)
+            {
+                throw new Exception(e.Message); 
+            }
+            catch (Exception e)  //this be last one.
             {
                 throw new Exception(e.Source);
             }
@@ -132,7 +141,17 @@ namespace Basics
                 Console.WriteLine("From Finally");
             }
         }
+        public static void Divider(int value)
+        {
+
+            if (value > 29)
+            {
+                throw new ValueIsExceedException("Value is bigger than 29."); //message'ı yazabilmek için base constructor'a parametre gönderdik.
+            }
+            var temp = 30 / value;
+        }
     }
+
 
     public class Three
     {
@@ -150,9 +169,9 @@ namespace Basics
         public One() { }
         public One(int value)
         {
-            Console.WriteLine("This is One : "+ value);
+            Console.WriteLine("This is One : " + value);
         }
-        public One(int value,int value2)
+        public One(int value, int value2)
         {
             Console.WriteLine($"This is One : {value} + {value2}");
         }
@@ -162,11 +181,11 @@ namespace Basics
         //}
 
     }
-    public class Two :One
+    public class Two : One
     {
-        public Two(int value):base(value)
+        public Two(int value) : base(value)
         {
             Console.WriteLine("This is Two : " + value);
         }
     }
-}   
+}

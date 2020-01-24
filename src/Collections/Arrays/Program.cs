@@ -56,7 +56,7 @@ namespace Arrays
             }
         }
 
-        public static void WriteNumber(int[] array)
+        public static void WriteNumber(int[] array) //static members ara singleton.
         {
             foreach(var number in array)
             {
