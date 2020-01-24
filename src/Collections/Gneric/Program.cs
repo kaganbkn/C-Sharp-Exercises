@@ -97,8 +97,8 @@ namespace Gneric
         public TKey genericProperty { get; set; }
     }
 
-    public class GenericClassTwo<T> where T: class   //class : allow the referance types - struct : allow the value types
-    {
+    public class GenericClassTwo<T> where T: class //, new() --> birden fazla yazılabilir.(new'lenebilir olmasını istiyoruz(string olmaz))   //buraya interface ismi yazılıp kısıt verilebilir.
+    {                                               //class : allow the referance types - struct : allow the value types
         public T Text { get; set; }
 
         public void WriteText(T Text)

@@ -49,6 +49,11 @@ namespace AttributeExamples
                 Console.WriteLine("}");
             }
 
+            ///// Part Two
+
+            AttrExample.Add(new AttrExample{Id = 1,Name="veli"});  //we got a warning because we added this function as a obsolete attribute.
+            AttrExample.AddNew(new AttrExample { Name = "veli" });  
+
             Console.Read();
         }
     }
