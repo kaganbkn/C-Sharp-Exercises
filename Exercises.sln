@@ -72,6 +72,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsEight", "src\Commons\Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionExamples", "src\Commons\ReflectionExamples\ReflectionExamples.csproj", "{FE3951B8-787F-4F07-9563-182E5F1AD129}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateExamp", "src\Commons\DelegateExamp\DelegateExamp.csproj", "{2D1234E4-BF64-4B40-8B73-3D6351DB0A29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -182,6 +184,10 @@ Global
 		{FE3951B8-787F-4F07-9563-182E5F1AD129}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE3951B8-787F-4F07-9563-182E5F1AD129}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE3951B8-787F-4F07-9563-182E5F1AD129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D1234E4-BF64-4B40-8B73-3D6351DB0A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1234E4-BF64-4B40-8B73-3D6351DB0A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1234E4-BF64-4B40-8B73-3D6351DB0A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1234E4-BF64-4B40-8B73-3D6351DB0A29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -218,6 +224,7 @@ Global
 		{BBAA2D31-030C-4DEB-B04F-A4F1E59424D2} = {545997EC-BFE0-4369-B91B-6448EBF0E2F6}
 		{34506628-0866-4698-9D00-094A169BBD00} = {9985C351-7429-4A30-AA1D-D993F601F913}
 		{FE3951B8-787F-4F07-9563-182E5F1AD129} = {9985C351-7429-4A30-AA1D-D993F601F913}
+		{2D1234E4-BF64-4B40-8B73-3D6351DB0A29} = {9985C351-7429-4A30-AA1D-D993F601F913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}

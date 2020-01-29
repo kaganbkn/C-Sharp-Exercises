@@ -54,6 +54,13 @@ namespace Polymorphism
             dbRun1.Add();
             dbRun1.Delete();
 
+            // Manager.Deneme(); // private method'a ulaşılamaz.
+            Manager.Deneme1();
+
+            // Interface open/close example
+
+            var intExamp=new InterfaceExample(new Manager());
+            intExamp.WriteAdd();
 
             Console.Read();
         }
@@ -74,6 +81,11 @@ namespace Polymorphism
         public virtual void Test() //virtual fonksiyonlar inherit sınıfta override edilebilir. //interface'de virtual kullanmaya gerek yok zaten.
         {
             Console.WriteLine("A.Test");
+        }
+
+        public static void writeA()
+        {
+            Console.WriteLine("A");
         }
     }
 

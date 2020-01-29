@@ -17,5 +17,14 @@ namespace Polymorphism.Data
         {
             Console.WriteLine("Manager Added");
         }
+        private static void Deneme()
+        {
+            Console.WriteLine("Deneme from private method.");
+        }
+
+        public static void Deneme1()
+        {
+            Deneme();
+        }
     }
 }

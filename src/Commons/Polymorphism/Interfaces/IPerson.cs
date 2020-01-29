@@ -10,5 +10,7 @@ namespace Polymorphism.Interfaces
         public string Name { get; set; }
         public string LastName { get; set; }
         public void Add();
+
+        //An interface is a contract for instances.
     }
 }

@@ -119,10 +119,10 @@ namespace Basics
             // Assign Casdonsole.Title property to string returned by ReadLine.
             Console.Title = Console.ReadLine();
 
+            /*
             try
             {
-                int value = Convert.ToInt32(Console.ReadLine());
-                Divider(value);
+                Divider();
             }
             catch (DivideByZeroException e)
             {
@@ -140,10 +140,48 @@ namespace Basics
             {
                 Console.WriteLine("From Finally");
             }
-        }
-        public static void Divider(int value)
-        {
+            */
 
+
+            //Alternative
+            //  Lambda : ()=>{}
+
+            HandleException(() =>   
+            {
+                Divider();
+            });
+
+            //HandleException(Divider);  //Alternative of alternative
+        }
+
+        private static void HandleException(Action action)  // Action --> void
+        {
+            try
+            {
+                action.Invoke();
+            }
+            catch (DivideByZeroException e)
+            {
+                throw new Exception(e.Message);
+            }
+            catch (ValueIsExceedException e)
+            {
+                throw new Exception(e.Message);
+            }
+            catch (Exception e)  //this be last one.
+            {
+                throw new Exception(e.Source);
+            }
+            finally
+            {
+                Console.WriteLine("From Finally");
+            }
+
+        }
+
+        public static void Divider()
+        {
+            int value = Convert.ToInt32(Console.ReadLine());
             if (value > 29)
             {
                 throw new ValueIsExceedException("Value is bigger than 29."); //message'ı yazabilmek için base constructor'a parametre gönderdik.
