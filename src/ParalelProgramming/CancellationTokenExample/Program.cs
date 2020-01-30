@@ -21,6 +21,7 @@ namespace CancellationTokenExample
                     if (token.IsCancellationRequested)
                     {
                         Console.WriteLine("Islem {0} satıda iptal edildi.",i);
+                        break;
                         //throw new OperationCanceledException(token);
                     }
                     Console.Write('.');
@@ -33,7 +34,11 @@ namespace CancellationTokenExample
 
             source.Cancel();
 
+            Thread.Sleep(2000);
+
             Console.WriteLine("Task Status = {0}", task.Status);
+
+            Console.Read();
 
 
         }

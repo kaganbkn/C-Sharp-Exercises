@@ -7,7 +7,7 @@ namespace Dicts
     {
         static void Main(string[] args)
         {
-            var dict = new Dictionary<string, int>();
+            var dict = new Dictionary<string, int>(); // Key must be unique.
             dict.Add("a", 98);
             dict.Add("b", 99);
             if (dict.ContainsKey("a")) 
