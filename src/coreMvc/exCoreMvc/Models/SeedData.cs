@@ -11,33 +11,31 @@ namespace exCoreMvc.Models
 {
     public static class SeedData
     {
-        public static async void Initialize(IServiceProvider serviceProvider)
+        public static async Task Initialize(IServiceProvider serviceProvider)
         {
-            await using (var context=new MovieDbContext(serviceProvider.GetRequiredService<DbContextOptions<MovieDbContext>>()))
+            await using var context = new MovieDbContext(serviceProvider.GetRequiredService<DbContextOptions<MovieDbContext>>());
+            if (context.Movies.Count() > 5)
             {
-                if (context.Movies.Count()>5)
-                {
-                    Log.Information("Seed is not running.");
-                    return;
-                }
-
-                await context.Movies.AddRangeAsync(
-                    new Movie()
-                    {
-                        Title = "When Harry Met Sally",
-                        ReleaseDate = DateTime.Parse("1989-2-12"),
-                        Genre = "Romantic Comedy",
-                        Price = 7.99M
-                    }, new Movie()
-                    {
-                        Title = "Ghostbusters 2",
-                        ReleaseDate = DateTime.Parse("1986-2-23"),
-                        Genre = "Comedy",
-                        Price = 9.99M
-                    });
-                await context.SaveChangesAsync();
-                Log.Information("Seed is worked.");
+                Log.Information("Seed is not running.");
+                return;
             }
+
+            await context.Movies.AddRangeAsync(
+                new Movie()
+                {
+                    Title = "When Harry Met Sally",
+                    ReleaseDate = DateTime.Parse("1989-2-12"),
+                    Genre = "Romantic Comedy",
+                    Price = 7.99M
+                }, new Movie()
+                {
+                    Title = "Ghostbusters 2",
+                    ReleaseDate = DateTime.Parse("1986-2-23"),
+                    Genre = "Comedy",
+                    Price = 9.99M
+                });
+            await context.SaveChangesAsync();
+            Log.Information("Seed is worked.");
 
         }
     }

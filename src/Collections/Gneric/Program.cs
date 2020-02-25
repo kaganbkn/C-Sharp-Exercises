@@ -31,6 +31,10 @@ namespace Gneric
         {
             return a + 2;
         }
+        public static void AddMore(ref string text)
+        { 
+            text += " !!!";
+        }
         public static void Main(string[] args)
         {
             MyGenericClass<int,string> obj=new MyGenericClass<int, string>(10);
@@ -61,6 +65,9 @@ namespace Gneric
 
             Console.WriteLine(AddSome(5, out int OutValue));
             Console.WriteLine(OutValue);
+            var deneme123= "merhaba";
+            AddMore(ref deneme123);
+            Console.WriteLine(deneme123);
 
             Console.Read();
         }

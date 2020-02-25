@@ -11,6 +11,12 @@ namespace Polymorphism.Interfaces
         public string LastName { get; set; }
         public void Add();
 
+        public void TryDeclareMethod()
+        {
+            Console.WriteLine("asd");
+        }
+
+        //public void TryMethod();
         //An interface is a contract for instances.
     }
 }

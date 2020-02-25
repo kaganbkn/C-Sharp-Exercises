@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using exCoreMvc.Data;
+using exCoreMvc.HostedServices;
 using exCoreMvc.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,7 @@ namespace exCoreMvc
             services.AddControllersWithViews();
             services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
             services.Configure<ConfigurationData>(c => Configuration.GetSection("Data").Bind(c));
+            services.AddHostedService<HelloWorldHostedService>();
 
         }
 

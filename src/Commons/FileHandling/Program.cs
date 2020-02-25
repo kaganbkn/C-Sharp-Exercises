@@ -32,7 +32,7 @@ namespace FileHandling
         static void Main(string[] args)
         {
             // "Path"
-
+            /*
             string tempPath = Path.GetTempPath();
             string tempName = Path.GetTempFileName();
             Console.WriteLine("Full Path : "+Path.Combine(tempPath,tempName));
@@ -72,8 +72,10 @@ namespace FileHandling
 
             File.AppendAllText(@"C:\Workspace\C#\C-Sharp-Exercises\Example.txt", "Appended Line");
             ReadLines();
-
+            */
             // byte[] img=File.ReadAllBytes(@"C:\Workspace\C#\C-Sharp-Exercises\Example.img");
+
+            CopyTo(@"C:\Users\kagan.beken\Desktop\New folder (3)\NativeDlls", @"C:\Users\kagan.beken\Desktop\New folder (3)\New folder", true);
 
             Console.Read();
         }
