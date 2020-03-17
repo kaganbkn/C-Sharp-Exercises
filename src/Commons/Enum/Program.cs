@@ -33,6 +33,9 @@ namespace Enum
             Console.WriteLine((int)importance);
             Console.WriteLine(importance.ToString() == "Critical");
             Console.WriteLine((int)Importance.After);
+            Console.WriteLine((int)Importance.Important);
+            Console.WriteLine("-------------------------");
+
 
 
             //bitwise

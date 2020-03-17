@@ -1,1 +1,13 @@
  type argument == generic type
+ 
+Process Explorer -- Thread Tracking
+
+Context Switching :  How many times thread is running
+
+--------------
+?????????????
+ Synchronization Context :https://www.c-sharpcorner.com/article/threading-simplified-synchronization-context-part-fourteen/
+callback function
+DP-singleton
+
+----------------

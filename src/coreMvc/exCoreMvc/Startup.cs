@@ -34,7 +34,6 @@ namespace exCoreMvc
             services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
             services.Configure<ConfigurationData>(c => Configuration.GetSection("Data").Bind(c));
             services.AddHostedService<HelloWorldHostedService>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

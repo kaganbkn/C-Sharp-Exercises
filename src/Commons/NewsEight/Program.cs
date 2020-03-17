@@ -10,7 +10,10 @@ namespace NewsEight
 {
     class Program
     {
-
+        public class Person
+        {
+            public string Name { get; set; }
+        }
         static void Main(string[] args)
         {
             //struct readonly
@@ -40,6 +43,18 @@ namespace NewsEight
             string strExample = null;
             //strExample = strExample ?? "example"; //eski kullanım
             strExample ??= "example"; //yeni kullanım
+
+            var person1=new Person();
+            var person2 = new Person();
+            person1.Name = "kagan";
+            person2.Name = person1.Name;
+            person2.Name = "beken";
+            Console.WriteLine(person1.Name);
+
+            string asd = "asd";
+            string asd1 = asd;
+            asd1 = "qwe";
+            Console.WriteLine(asd);
 
             Console.Read();
         }

@@ -20,7 +20,7 @@ namespace Polymorphism
         }
         static void Main(string[] args)
         {
-            Console.WriteLine(Sum(1,2));
+            Console.WriteLine(Sum(1,2)); //overloading
             Console.WriteLine(Sum(1, 2,3));
 
             ////////

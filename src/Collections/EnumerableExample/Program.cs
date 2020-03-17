@@ -53,7 +53,6 @@ namespace EnumerableExample
 
             Console.Read();
         }
-
         public static void printNumber(IEnumerable<int> arrayNumber)
         {
             foreach (var item in arrayNumber)
@@ -63,13 +62,11 @@ namespace EnumerableExample
         }
         public static void printNumber1(IEnumerable<int> enumerable)
         {
-            using (var enumerator = enumerable.GetEnumerator())
+            using var enumerator = enumerable.GetEnumerator();
+            while (enumerator.MoveNext())
             {
-                while (enumerator.MoveNext())
-                {
-                    var item = enumerator.Current;
-                    Console.Write(item+" ");
-                }
+                var item = enumerator.Current;
+                Console.Write(item+" ");
             }
         }
     }

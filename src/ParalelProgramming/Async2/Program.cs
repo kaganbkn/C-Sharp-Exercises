@@ -34,14 +34,14 @@ namespace Async2
         {
             var person = new Amount();
 
-            //person.balance = 50;
+            person.balance = 50;
 
-            //var t1 = new Thread(thread1 => person.Withdraw(20));
-            //var t2 = new Thread(thread2 => person.Withdraw(20));
-            //var t3 = new Thread(thread3 => person.Withdraw(20));
-            //t1.Start();
-            //t2.Start();
-            //t3.Start();
+            var t1 = new Thread(thread1 => person.Withdraw(20));
+            var t2 = new Thread(thread2 => person.Withdraw(20));
+            var t3 = new Thread(thread3 => person.Withdraw(20));
+            t1.Start();
+            t2.Start();
+            t3.Start();
 
             person.balance = 50;
             var t11 = new Thread(thread1 => person.WithdrawWithoutLock(20));
@@ -101,7 +101,7 @@ namespace Async2
                 Console.WriteLine("New Balance : " + balance);
             }
         }
-        public void WithdrawWithoutLock(decimal amount)  //this function is thread safe because we use "lock"
+        public void WithdrawWithoutLock(decimal amount)
         {
             if (amount > balance)
             {

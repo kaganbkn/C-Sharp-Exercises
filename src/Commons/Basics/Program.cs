@@ -88,6 +88,7 @@ namespace Basics
             ///
             /// 
 
+            Console.WriteLine("------------------------------------");
             Console.WriteLine(Name);
             Name = "Perls";
             Console.WriteLine(Name);
@@ -114,12 +115,12 @@ namespace Basics
             }
 
             Console.WriteLine();
-            //var cChar = Console.ReadKey().KeyChar;
+            //var cChar = Console.ReadKey().KeyChar;  //get one char
 
             // Assign Casdonsole.Title property to string returned by ReadLine.
             Console.Title = Console.ReadLine();
 
-            /*
+            
             try
             {
                 Divider();
@@ -140,7 +141,7 @@ namespace Basics
             {
                 Console.WriteLine("From Finally");
             }
-            */
+            
 
 
             //Alternative
@@ -152,6 +153,8 @@ namespace Basics
             });
 
             //HandleException(Divider);  //Alternative of alternative
+
+            Console.Read();
         }
 
         private static void HandleException(Action action)  // Action --> void
@@ -197,7 +200,7 @@ namespace Basics
 
         public static string Name
         {
-            get { return _name ?? "Default"; }
+            get { return _name ?? "Defaultt"; }
             set { _name = value; }
         }
     }
@@ -221,7 +224,7 @@ namespace Basics
     }
     public class Two : One
     {
-        public Two(int value) : base(value)
+        public Two(int value) : base(value)  //value passed to base class
         {
             Console.WriteLine("This is Two : " + value);
         }

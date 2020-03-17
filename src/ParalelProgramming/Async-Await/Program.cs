@@ -18,7 +18,7 @@ namespace Async_Await
             ////////////////
             ///
 
-            /*
+            
             while (true)
             {
                 // Start computation.
@@ -26,7 +26,7 @@ namespace Async_Await
                 // Handle user input.
                 string result = Console.ReadLine();
                 Console.WriteLine("You typed: " + result);
-            }*/
+            }
 
             ///////////
             ///

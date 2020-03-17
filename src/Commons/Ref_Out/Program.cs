@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Ref_Out
 {
@@ -24,6 +25,22 @@ namespace Ref_Out
             Console.WriteLine($"3-a--> {b}, c--> ");
             SumOfNumber2(out int c, b);
             Console.WriteLine($"3-a--> {b}, c--> {c}");
+
+            var textA = "world"; //string is a referance type but we need use ref.
+            Person.AddHello(textA);
+            Console.WriteLine(textA);
+
+            var obj=new Person();
+            obj.Name = "zeee";
+            Person.SetName(obj);
+            Console.WriteLine(obj.Name);
+
+            StringBuilder test = new StringBuilder();
+            test.Append("stable");
+            Console.WriteLine(test);
+            Person.TestI(test);
+            Console.WriteLine(test);
+
             Console.Read();
 
         }
@@ -39,6 +56,25 @@ namespace Ref_Out
         {
             value = 5;
             value += value2;
+        }
+    }
+
+    class Person
+    {
+        public string Name { get; set; }
+
+        public static void SetName(Person obj)
+        {
+            obj.Name = "ez";
+        }
+        public static void TestI(StringBuilder test)
+        {
+            test.Append("changing");
+        }
+
+        public static void AddHello(string text)
+        {
+            text += " hello.";
         }
     }
 }

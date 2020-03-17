@@ -59,6 +59,7 @@ namespace Gneric
             Swap<int>(ref first, ref second); // "out" and "ref" are referance types.
             Swap1<string>(first1, second1);
             Console.WriteLine($"first : {first} , second : {second}");
+            Console.WriteLine($"first1 : {first1} , second1 : {second1}");
 
             var number = 3;
             Console.WriteLine(AddTwo(number));

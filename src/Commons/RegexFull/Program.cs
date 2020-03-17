@@ -5,7 +5,7 @@ namespace RegexFull
 {
     class Program
     {
-        static void Main(string[] args)  // Resource : https://ceaksan.com/tr/regex-regular-expressions-nedir/
+        static void Main(string[] args)
         {
 
             Regex regex = new Regex("Hello");

@@ -5,8 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="xunit.extensibility.core" Version="2.1.0" />
-  </ItemGroup>
-
 </Project>

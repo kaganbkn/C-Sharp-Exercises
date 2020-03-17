@@ -65,12 +65,15 @@ namespace AsyncProgramming
 
         public static async Task WebReader()
         {
-            //Task yerine void kullanmak yanlıştır. async void  kullanırsak hata durumlarını yakalayamayız.
+            //Task yerine void kullanmak yanlıştır. async void  kullanırsak hata durumlarını yakalayamayız.Sadece eventlerde?
             using var client = new HttpClient();
-            var response = await client.GetAsync("https://www.google.com.tr/");
-            response.EnsureSuccessStatusCode();
-            var content = await response.Content.ReadAsByteArrayAsync();
+            var google =  client.GetAsync("https://www.google.com.tr/");
+            var yahoo =  client.GetAsync("https://www.yahoo.com/");
+            //google.EnsureSuccessStatusCode();
+            var content = await google.Result.Content.ReadAsByteArrayAsync();
+            var content1 = await yahoo.Result.Content.ReadAsByteArrayAsync();
             Console.WriteLine(System.Text.Encoding.UTF8.GetString(content));
+            Console.WriteLine(System.Text.Encoding.UTF8.GetString(content1));
         }
 
         public static async Task LoadData()
