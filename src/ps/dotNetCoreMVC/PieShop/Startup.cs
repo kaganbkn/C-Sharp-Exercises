@@ -32,6 +32,7 @@ namespace PieShop
 
             app.UseHttpsRedirection();
             app.UseStaticFiles(); //wwwroot 
+            // http://localhost:5555/image1.jpg means wwwroot/image1.jpg
 
             app.UseRouting();
 
