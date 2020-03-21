@@ -44,13 +44,14 @@ namespace PieShop
             app.UseStaticFiles(); //wwwroot 
             // http://localhost:5555/image1.jpg means wwwroot/image1.jpg
 
+            // klasörleme den gelen routing --> convention base routing
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
-            {
+            { 
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Pie}/{action=List}/{id?}");
+                    pattern: "{controller=Pie}/{action=List}/{id?}");  //id:int? 
             });
         }
     }
