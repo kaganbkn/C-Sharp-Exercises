@@ -15,6 +15,7 @@ namespace PieShop.Models
 
         public DbSet<Pie> Pies { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,7 +32,7 @@ namespace PieShop.Models
                 CategoryId = 2,
                 LongDescription = "Icing carrot cake jelly-o cheesecake.",
                 ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/strawberrypie.jpg",
-                InStock = true, IsPieOfTheWeek = false,
+                InStock = true, IsPieOfTheWeek = true,
                 ImageThumbnailUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/strawberrypiesmall.jpg"
             });
 
@@ -41,7 +42,7 @@ namespace PieShop.Models
                 CategoryId = 1,
                 LongDescription = "Icing carrot cake jelly-o cheesecake.",
                 ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/cheesecake.jpg", InStock = true,
-                IsPieOfTheWeek = false,
+                IsPieOfTheWeek = true,
                 ImageThumbnailUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/cheesecakesmall.jpg"
             });
         }

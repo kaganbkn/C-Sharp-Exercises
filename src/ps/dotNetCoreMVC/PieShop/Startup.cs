@@ -30,6 +30,9 @@ namespace PieShop
             services.AddControllersWithViews(); //for mvc 
             services.AddScoped<IPieRepository, PieRepository>(); //per http request
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ShoppingCart>(sp=>ShoppingCart.GetCart(sp)); //the cartId will be created default. //Invoked
+            services.AddHttpContextAccessor();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +47,8 @@ namespace PieShop
             app.UseStaticFiles(); //wwwroot 
             // http://localhost:5555/image1.jpg means wwwroot/image1.jpg
 
+            app.UseSession(); //the middleware order is important.
+
             // klasörleme den gelen routing --> convention base routing
             app.UseRouting();
 
@@ -51,7 +56,7 @@ namespace PieShop
             { 
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Pie}/{action=List}/{id?}");  //id:int? 
+                    pattern: "{controller=Home}/{action=Index}/{id?}");  //id:int? 
             });
         }
     }
