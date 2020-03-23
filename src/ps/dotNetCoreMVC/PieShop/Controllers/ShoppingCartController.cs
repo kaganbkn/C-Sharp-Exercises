@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PieShop.Models;
 using PieShop.ViewModels;
@@ -11,6 +12,7 @@ using PieShop.ViewModels;
 
 namespace PieShop.Controllers
 {
+    [Authorize]
     public class ShoppingCartController : Controller
     {
         private readonly IPieRepository _pieRepository;
