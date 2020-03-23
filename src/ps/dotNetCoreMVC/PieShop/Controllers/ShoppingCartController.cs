@@ -25,11 +25,10 @@ namespace PieShop.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var items = _shoppingCart.GetShoppingCartItems();
             var shoppingCartViewModel = new ShoppingCartViewModel()
             {
-                ShoppingCartItems = items,
-                GetShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+                ShoppingCartItems = _shoppingCart.GetShoppingCartItems(),
+            GetShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
             };
             return View(shoppingCartViewModel);
         }

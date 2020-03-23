@@ -30,9 +30,11 @@ namespace PieShop
             services.AddControllersWithViews(); //for mvc 
             services.AddScoped<IPieRepository, PieRepository>(); //per http request
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<ShoppingCart>(sp=>ShoppingCart.GetCart(sp)); //the cartId will be created default. //Invoked
             services.AddHttpContextAccessor();
             services.AddSession();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,12 +53,14 @@ namespace PieShop
 
             // klasörleme den gelen routing --> convention base routing
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             { 
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");  //id:int? 
+                endpoints.MapRazorPages();
             });
         }
     }
