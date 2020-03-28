@@ -12,7 +12,7 @@
 - variable vs property : https://www.codeproject.com/Questions/646696/Difference-Between-variable-and-property
 - Constraints in Generics : https://www.tutorialsteacher.com/csharp/constraints-in-generic-csharp , https://www.hikmetokumus.com/makale/150/csharp-generic-tiplere-where-ile-kisitlama-getirmek---constraints-on-type-parameters
 - Value vs Referance Type : https://www.tutlane.com/tutorial/csharp/csharp-value-type-and-reference-type-with-examples
-
+- AutoMapper Summary : https://www.codementor.io/@zedotech/how-to-using-automapper-on-asp-net-core-3-0-via-dependencyinjection-zq497lzsq 
 
 
 
