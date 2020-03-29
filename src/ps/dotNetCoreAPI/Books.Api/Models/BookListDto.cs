@@ -2,7 +2,7 @@
 
 namespace Books.Api.Models
 {
-    public class BookDto
+    public class BookListDto
     {
         public Guid Id { get; set; }
         public string Author { get; set; }

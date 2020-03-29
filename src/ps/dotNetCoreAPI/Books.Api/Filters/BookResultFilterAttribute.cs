@@ -19,11 +19,11 @@ namespace Books.Api.Filters
                 || resultFromAction.StatusCode < 200
                 || resultFromAction.StatusCode >= 300)
             {
-                await next();
+                await next(); //its middleware because of we ınvoke next middleware
                 return;
             }
 
-            resultFromAction.Value = Mapper.Map<BookDto>(resultFromAction.Value);
+            resultFromAction.Value = Mapper.Map<BookListDto>(resultFromAction.Value);
 
             await next();
         }

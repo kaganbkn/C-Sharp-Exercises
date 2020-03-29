@@ -32,18 +32,36 @@ namespace Books.Api.Controllers
         {
             return await _bookRepository.GetBooksAsync();
         }
-        [Route("{id}")]
+
+        [Route("{id}", Name = "GetBook")]
         [HttpGet]
         [BookResultFilter]
         public async Task<IActionResult> GetBook(Guid id)
         {
             var bookEntity = await _bookRepository.GetBookAsync(id);
-            //var newBookEntity = _mapper.Map<BookDto>(bookEntity);
+            //var newBookEntity = _mapper.Map<BookListDto>(bookEntity);
             if (bookEntity == null)
             {
                 return NotFound();
             }
             return Ok(bookEntity);
         }
+
+        [HttpPost]
+        [BookResultFilter]
+        public async Task<IActionResult> CreateBook(BookCreationDto bookToCreate)
+        {
+            var newBook = _mapper.Map<Book>(bookToCreate);
+
+            _bookRepository.AddBook(newBook);
+            await _bookRepository.SaveChangesAsync();
+
+            // Fetch(refetch) the book from the data store, including the author.
+            await _bookRepository.GetBookAsync(newBook.Id);
+
+            return CreatedAtRoute("GetBook", new { id = newBook.Id }, newBook);
+        }
+
+
     }
 }

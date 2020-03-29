@@ -22,7 +22,7 @@ namespace Books.Api.Filters
                 return;
             }
 
-            resultFromAction.Value = Mapper.Map<IEnumerable<BookDto>>(resultFromAction.Value);
+            resultFromAction.Value = Mapper.Map<IEnumerable<BookListDto>>(resultFromAction.Value);
 
             await next();
         }

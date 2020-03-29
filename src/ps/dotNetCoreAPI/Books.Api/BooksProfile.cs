@@ -13,9 +13,10 @@ namespace Books.Api
     {
         public BooksProfile()
         {
-            CreateMap<Book, BookDto>()
+            CreateMap<Book, BookListDto>()
                 .ForMember(dest => dest.Author, opt => opt.MapFrom(src =>
                     src.Author.FirstName + " " + src.Author.LastName));
+            CreateMap<BookCreationDto, Book>();
         }
     }
 }
