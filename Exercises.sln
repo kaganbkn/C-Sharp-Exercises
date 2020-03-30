@@ -95,7 +95,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PieShop", "src\ps\dotNetCor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotNetCoreAPI", "dotNetCoreAPI", "{9FB1585C-5FAE-4668-9869-81B7BF40507B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Api", "src\ps\dotNetCoreAPI\Books.Api\Books.Api.csproj", "{91B9EF11-CDCF-4FF9-8F33-7D93A5C541F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Api", "src\ps\dotNetCoreAPI\Books.Api\Books.Api.csproj", "{91B9EF11-CDCF-4FF9-8F33-7D93A5C541F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCovers.Api", "src\ps\dotNetCoreAPI\BookCovers.Api\BookCovers.Api.csproj", "{C97C2EE0-80EB-4452-AEA8-15F602F8186B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -235,6 +237,10 @@ Global
 		{91B9EF11-CDCF-4FF9-8F33-7D93A5C541F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91B9EF11-CDCF-4FF9-8F33-7D93A5C541F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91B9EF11-CDCF-4FF9-8F33-7D93A5C541F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C97C2EE0-80EB-4452-AEA8-15F602F8186B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C97C2EE0-80EB-4452-AEA8-15F602F8186B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C97C2EE0-80EB-4452-AEA8-15F602F8186B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C97C2EE0-80EB-4452-AEA8-15F602F8186B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -283,6 +289,7 @@ Global
 		{41E7B878-A97E-4B60-805F-D58B30E0C7DC} = {924F6A9D-B7B7-4F5B-8610-4A18AE15047D}
 		{9FB1585C-5FAE-4668-9869-81B7BF40507B} = {2BED194D-FC99-4F98-9365-76ED45C216A7}
 		{91B9EF11-CDCF-4FF9-8F33-7D93A5C541F3} = {9FB1585C-5FAE-4668-9869-81B7BF40507B}
+		{C97C2EE0-80EB-4452-AEA8-15F602F8186B} = {9FB1585C-5FAE-4668-9869-81B7BF40507B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}

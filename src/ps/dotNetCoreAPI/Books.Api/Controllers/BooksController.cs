@@ -5,6 +5,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
 using AutoMapper;
 using Books.Api.Entities;
+using Books.Api.ExternalModels;
 using Books.Api.Filters;
 using Books.Api.Models;
 using Books.Api.Services;
@@ -35,8 +36,9 @@ namespace Books.Api.Controllers
 
         [Route("{id}", Name = "GetBook")]
         [HttpGet]
-        [BookResultFilter]
-        public async Task<IActionResult> GetBook(Guid id)
+        //[BookResultFilter]
+        [BookWithCoversResultFilterAttribute]
+        public async Task<IActionResult> GetBook(Guid id) // We don't use the Async signature in method name in controller based on convention.
         {
             var bookEntity = await _bookRepository.GetBookAsync(id);
             //var newBookEntity = _mapper.Map<BookListDto>(bookEntity);
@@ -44,7 +46,18 @@ namespace Books.Api.Controllers
             {
                 return NotFound();
             }
-            return Ok(bookEntity);
+            //return Ok(bookEntity);
+
+
+            ///// EXTERNAL API CALL
+            //var bookCover = await _bookRepository.GetBookCoverAsync("dummy");
+
+            var bookCovers = await _bookRepository.GetBookCoversAsync(id);
+            // var propertyBag = new Tuple<Book, IEnumerable<BookCover>>(bookEntity, bookCovers); // We access the value via item1 and item2.
+            // (Book book, IEnumerable<BookCover> bookCovers) propertyBag1 = (bookEntity, bookCovers);// We access the value via book and bookCovers.
+
+            // return Ok((book: bookEntity, bookCover: bookCovers)); // Another way to define a tuple. 
+            return Ok((bookEntity, bookCovers));
         }
 
         [HttpPost]

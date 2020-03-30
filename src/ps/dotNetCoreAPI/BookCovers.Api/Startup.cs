@@ -2,17 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
-using Books.Api.Contexts;
-using Books.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace Books.Api
+namespace BookCovers.Api
 {
     public class Startup
     {
@@ -27,13 +26,6 @@ namespace Books.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<BooksContext>(c
-                => c.UseSqlServer(Configuration.GetConnectionString("Default")));
-            services.AddScoped<IBookRepository, BookRepository>();
-            services.AddAutoMapper(typeof(Startup));
-
-            services.AddHttpClient();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
