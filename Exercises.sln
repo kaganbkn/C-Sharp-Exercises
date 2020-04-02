@@ -97,7 +97,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotNetCoreAPI", "dotNetCore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Api", "src\ps\dotNetCoreAPI\Books.Api\Books.Api.csproj", "{91B9EF11-CDCF-4FF9-8F33-7D93A5C541F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCovers.Api", "src\ps\dotNetCoreAPI\BookCovers.Api\BookCovers.Api.csproj", "{C97C2EE0-80EB-4452-AEA8-15F602F8186B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookCovers.Api", "src\ps\dotNetCoreAPI\BookCovers.Api\BookCovers.Api.csproj", "{C97C2EE0-80EB-4452-AEA8-15F602F8186B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

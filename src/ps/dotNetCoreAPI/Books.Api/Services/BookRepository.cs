@@ -10,6 +10,7 @@ using Books.Api.Contexts;
 using Books.Api.Entities;
 using Books.Api.ExternalModels;
 using Books.Api.Models;
+using Books.Legacy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -38,8 +39,23 @@ namespace Books.Api.Services
 
         public async Task<Book> GetBookAsync(Guid id)
         {
+            // Don't use Tast.Run()
+            // Don't use Async code blocking .Result or .Wait()
+            //
+            var booksPages = await CalculatePages();
+            //
+
             return await _context.Books.Include(c => c.Author)
                 .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        private Task<int> CalculatePages()
+        {
+            return Task.Run(() => 
+            {
+                var pageCalculator = new ComplicatedPageCalculator();
+                return pageCalculator.CalculateBookPages();
+            });
         }
 
         public void AddBook(Book bookToAdd)
