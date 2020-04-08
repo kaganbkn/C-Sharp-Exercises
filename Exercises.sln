@@ -99,6 +99,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Api", "src\ps\dotNetC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookCovers.Api", "src\ps\dotNetCoreAPI\BookCovers.Api\BookCovers.Api.csproj", "{C97C2EE0-80EB-4452-AEA8-15F602F8186B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseLibrary.Api", "src\ps\dotNetCoreAPI\CourseLibrary.Api\CourseLibrary.Api.csproj", "{446F57E2-20B7-4363-A203-6A1230C41E76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -241,6 +243,10 @@ Global
 		{C97C2EE0-80EB-4452-AEA8-15F602F8186B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C97C2EE0-80EB-4452-AEA8-15F602F8186B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C97C2EE0-80EB-4452-AEA8-15F602F8186B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446F57E2-20B7-4363-A203-6A1230C41E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446F57E2-20B7-4363-A203-6A1230C41E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446F57E2-20B7-4363-A203-6A1230C41E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446F57E2-20B7-4363-A203-6A1230C41E76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -290,6 +296,7 @@ Global
 		{9FB1585C-5FAE-4668-9869-81B7BF40507B} = {2BED194D-FC99-4F98-9365-76ED45C216A7}
 		{91B9EF11-CDCF-4FF9-8F33-7D93A5C541F3} = {9FB1585C-5FAE-4668-9869-81B7BF40507B}
 		{C97C2EE0-80EB-4452-AEA8-15F602F8186B} = {9FB1585C-5FAE-4668-9869-81B7BF40507B}
+		{446F57E2-20B7-4363-A203-6A1230C41E76} = {9FB1585C-5FAE-4668-9869-81B7BF40507B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}
