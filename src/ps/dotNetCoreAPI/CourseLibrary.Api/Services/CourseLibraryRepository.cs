@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using CourseLibrary.Api.DbContexts;
 using CourseLibrary.Api.Entities;
+using CourseLibrary.Api.ResourceParameters;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CourseLibrary.Api.Services
 {
@@ -10,7 +14,7 @@ namespace CourseLibrary.Api.Services
     {
         private readonly CourseLibraryContext _context;
 
-        public CourseLibraryRepository(CourseLibraryContext context )
+        public CourseLibraryRepository(CourseLibraryContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
@@ -28,15 +32,15 @@ namespace CourseLibrary.Api.Services
             }
             // always set the AuthorId to the passed-in authorId
             course.AuthorId = authorId;
-            _context.Courses.Add(course); 
-        }         
+            _context.Courses.Add(course);
+        }
 
         public void DeleteCourse(Course course)
         {
             _context.Courses.Remove(course);
         }
-  
-        public Course GetCourse(Guid authorId, Guid courseId)
+
+        public async Task<Course> GetCourseAsync(Guid authorId, Guid courseId)
         {
             if (authorId == Guid.Empty)
             {
@@ -48,20 +52,19 @@ namespace CourseLibrary.Api.Services
                 throw new ArgumentNullException(nameof(courseId));
             }
 
-            return _context.Courses
-              .Where(c => c.AuthorId == authorId && c.Id == courseId).FirstOrDefault();
+            return await _context.Courses.FirstOrDefaultAsync(c => c.AuthorId == authorId && c.Id == courseId);
         }
 
-        public IEnumerable<Course> GetCourses(Guid authorId)
+        public async Task<IEnumerable<Course>> GetCoursesAsync(Guid authorId)
         {
             if (authorId == Guid.Empty)
             {
                 throw new ArgumentNullException(nameof(authorId));
             }
 
-            return _context.Courses
+            return await _context.Courses
                         .Where(c => c.AuthorId == authorId)
-                        .OrderBy(c => c.Title).ToList();
+                        .OrderBy(c => c.Title).ToListAsync();
         }
 
         public void UpdateCourse(Course course)
@@ -87,14 +90,14 @@ namespace CourseLibrary.Api.Services
             _context.Authors.Add(author);
         }
 
-        public bool AuthorExists(Guid authorId)
+        public async Task<bool> AuthorExistsAsync(Guid authorId)
         {
             if (authorId == Guid.Empty)
             {
                 throw new ArgumentNullException(nameof(authorId));
             }
 
-            return _context.Authors.Any(a => a.Id == authorId);
+            return await _context.Authors.AnyAsync(a => a.Id == authorId);
         }
 
         public void DeleteAuthor(Author author)
@@ -106,33 +109,66 @@ namespace CourseLibrary.Api.Services
 
             _context.Authors.Remove(author);
         }
-        
-        public Author GetAuthor(Guid authorId)
+
+        public async Task<IEnumerable<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResource)
+        {
+            if (authorsResource == null)
+            {
+                throw new ArgumentNullException(nameof(authorsResource));
+            }
+
+            if (string.IsNullOrWhiteSpace(authorsResource.MainCategory) 
+                && string.IsNullOrWhiteSpace(authorsResource.SearchQuery))
+            {
+                return await GetAuthorsAsync();
+            }
+
+            //IQueryable<Author> queryableAuthors;
+            var collection = _context.Authors as IQueryable<Author>; // Cast operation
+            
+            if (!string.IsNullOrWhiteSpace(authorsResource.MainCategory)) //filter
+            {
+                var mainCategory = authorsResource.MainCategory.Trim();
+                collection = collection.Where(c => c.MainCategory == mainCategory);
+            }
+
+            if (!string.IsNullOrWhiteSpace(authorsResource.SearchQuery))  //search
+            {
+                var searchQuery = authorsResource.SearchQuery.Trim();
+                collection = collection.Where(c => c.FirstName.Contains(searchQuery)
+                || c.LastName.Contains(searchQuery)
+                || c.MainCategory.Contains(searchQuery));
+            }
+
+            return await collection.ToListAsync();
+        }
+
+        public async Task<Author> GetAuthorAsync(Guid authorId)
         {
             if (authorId == Guid.Empty)
             {
                 throw new ArgumentNullException(nameof(authorId));
             }
 
-            return _context.Authors.FirstOrDefault(a => a.Id == authorId);
+            return await _context.Authors.FirstOrDefaultAsync(a => a.Id == authorId);
         }
 
-        public IEnumerable<Author> GetAuthors()
+        public async Task<IEnumerable<Author>> GetAuthorsAsync()
         {
-            return _context.Authors.ToList<Author>();
+            return await _context.Authors.ToListAsync();
         }
-         
-        public IEnumerable<Author> GetAuthors(IEnumerable<Guid> authorIds)
+
+        public async Task<IEnumerable<Author>> GetAuthorsAsync(IEnumerable<Guid> authorIds)
         {
             if (authorIds == null)
             {
                 throw new ArgumentNullException(nameof(authorIds));
             }
 
-            return _context.Authors.Where(a => authorIds.Contains(a.Id))
+            return await _context.Authors.Where(a => authorIds.Contains(a.Id))
                 .OrderBy(a => a.FirstName)
-                .OrderBy(a => a.LastName)
-                .ToList();
+                .ThenBy(a => a.LastName)
+                .ToListAsync();
         }
 
         public void UpdateAuthor(Author author)
@@ -140,9 +176,9 @@ namespace CourseLibrary.Api.Services
             // no code in this implementation
         }
 
-        public bool Save()
+        public async Task<bool> SaveAsync()
         {
-            return (_context.SaveChanges() >= 0);
+            return (await _context.SaveChangesAsync() >= 0);
         }
 
         public void Dispose()
@@ -155,7 +191,7 @@ namespace CourseLibrary.Api.Services
         {
             if (disposing)
             {
-               // dispose resources when needed
+                // dispose resources when needed
             }
         }
     }

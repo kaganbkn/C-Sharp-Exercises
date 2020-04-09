@@ -4,7 +4,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using AutoMapper;
+using CourseLibrary.Api.Entities;
 using CourseLibrary.Api.Models;
+using CourseLibrary.Api.ResourceParameters;
 using CourseLibrary.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,17 +26,19 @@ namespace CourseLibrary.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAuthors()
+        [HttpHead]
+        public async Task<IActionResult> GetAuthors([FromQuery] AuthorsResourceParameters authorsResourceParameters)
+            // we must add [FromQuery(Name = "category")] here because its a complex type otherwise we don't need it.
         {
-            var authors = _courseLibraryRepository.GetAuthors();
-            var authorsDto = _mapper.Map<IEnumerable<AuthorDto>>(authors);
+            var authors = await _courseLibraryRepository.GetAuthorsAsync(authorsResourceParameters);
+            var authorsDto = _mapper.Map<IEnumerable<AuthorDto>>(authors);  
             return Ok(authorsDto);
         }
 
-        [HttpGet("{authorId}")]
-        public IActionResult GetAuthor(Guid authorId)
+        [HttpGet("{authorId}",Name = "GetAuthor")]
+        public async Task<IActionResult> GetAuthor(Guid authorId)
         {
-            var author = _courseLibraryRepository.GetAuthor(authorId);
+            var author = await _courseLibraryRepository.GetAuthorAsync(authorId);
             if (author == null)
             {
                 return NotFound();
@@ -42,6 +46,24 @@ namespace CourseLibrary.Api.Controllers
             var authorsDto = _mapper.Map<AuthorDto>(author);
             
             return Ok(authorsDto); // 200 Ok
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<AuthorDto>> CreateAuthor(CreateAuthorDto author)
+        {
+            //if (author == null) //ApiController attribute provide us this control.
+            //{
+            //    return BadRequest();
+            //}
+
+            var authorEntity = _mapper.Map<Author>(author);
+            _courseLibraryRepository.AddAuthor(authorEntity);
+            await _courseLibraryRepository.SaveAsync();
+
+            var authorToReturn = _mapper.Map<AuthorDto>(authorEntity);
+            return CreatedAtRoute("GetAuthor",
+                new{authorId=authorToReturn.Id},
+                authorToReturn);
         }
     }
 }
