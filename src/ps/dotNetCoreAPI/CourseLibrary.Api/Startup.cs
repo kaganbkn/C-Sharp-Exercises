@@ -27,7 +27,8 @@ namespace CourseLibrary.Api
             services.AddControllers(setupAction =>
             {
                 setupAction.ReturnHttpNotAcceptable = true; // This parameter handle acceptable format(i.e : app/json,app/xml) our api and return error(406).
-            }).AddXmlDataContractSerializerFormatters();
+            }).AddXmlDataContractSerializerFormatters();    // We can use xml in input and output content with this parameter.
+                                                            // Content-Type(request content) , Accept (response content) 
 
             services.AddAutoMapper(typeof(Startup));
 

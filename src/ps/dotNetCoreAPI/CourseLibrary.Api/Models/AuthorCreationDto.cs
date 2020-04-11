@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CourseLibrary.Api.Models
 {
-    public class CreateAuthorDto
+    public class AuthorCreationDto
     {
         public string FirstName { get; set; }
 
@@ -11,5 +12,6 @@ namespace CourseLibrary.Api.Models
         public DateTimeOffset DateOfBirth { get; set; }
 
         public string MainCategory { get; set; }
+        public ICollection<CourseCreationDto> Courses { get; set; } = new List<CourseCreationDto>();
     }
 }

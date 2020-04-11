@@ -28,14 +28,14 @@ namespace CourseLibrary.Api.Controllers
         [HttpGet]
         [HttpHead]
         public async Task<IActionResult> GetAuthors([FromQuery] AuthorsResourceParameters authorsResourceParameters)
-            // we must add [FromQuery(Name = "category")] here because its a complex type otherwise we don't need it.
+        // we must add [FromQuery(Name = "category")] here because its a complex type otherwise we don't need it.
         {
             var authors = await _courseLibraryRepository.GetAuthorsAsync(authorsResourceParameters);
-            var authorsDto = _mapper.Map<IEnumerable<AuthorDto>>(authors);  
+            var authorsDto = _mapper.Map<IEnumerable<AuthorDto>>(authors);
             return Ok(authorsDto);
         }
 
-        [HttpGet("{authorId}",Name = "GetAuthor")]
+        [HttpGet("{authorId}", Name = "GetAuthor")]
         public async Task<IActionResult> GetAuthor(Guid authorId)
         {
             var author = await _courseLibraryRepository.GetAuthorAsync(authorId);
@@ -44,26 +44,33 @@ namespace CourseLibrary.Api.Controllers
                 return NotFound();
             }
             var authorsDto = _mapper.Map<AuthorDto>(author);
-            
+
             return Ok(authorsDto); // 200 Ok
         }
 
         [HttpPost]
-        public async Task<ActionResult<AuthorDto>> CreateAuthor(CreateAuthorDto author)
+        public async Task<ActionResult<AuthorDto>> CreateAuthor(AuthorCreationDto authorCreation)
         {
-            //if (author == null) //ApiController attribute provide us this control.
+            //if (author == null) // This control provide us from ApiController attribute.
             //{
             //    return BadRequest();
             //}
 
-            var authorEntity = _mapper.Map<Author>(author);
+            var authorEntity = _mapper.Map<Author>(authorCreation);
             _courseLibraryRepository.AddAuthor(authorEntity);
             await _courseLibraryRepository.SaveAsync();
 
             var authorToReturn = _mapper.Map<AuthorDto>(authorEntity);
             return CreatedAtRoute("GetAuthor",
-                new{authorId=authorToReturn.Id},
+                new { authorId = authorToReturn.Id },
                 authorToReturn);
+        }
+
+        [HttpOptions]
+        public IActionResult GetAuthorsOptions()
+        {
+            Response.Headers.Add("Allow", "GET,POST,OPTIONS");
+            return Ok();
         }
     }
 }

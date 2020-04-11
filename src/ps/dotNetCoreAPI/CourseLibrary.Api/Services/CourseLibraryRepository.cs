@@ -6,6 +6,7 @@ using CourseLibrary.Api.DbContexts;
 using CourseLibrary.Api.Entities;
 using CourseLibrary.Api.ResourceParameters;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.EntityFrameworkCore;
 
 namespace CourseLibrary.Api.Services
@@ -80,7 +81,7 @@ namespace CourseLibrary.Api.Services
             }
 
             // the repository fills the id (instead of using identity columns)
-            author.Id = Guid.NewGuid();
+            author.Id = Guid.NewGuid(); // we don't need this.
 
             foreach (var course in author.Courses)
             {
@@ -88,6 +89,11 @@ namespace CourseLibrary.Api.Services
             }
 
             _context.Authors.Add(author);
+        }
+
+        public void AddAuthorRange(IEnumerable<Author> author)
+        {
+            _context.Authors.AddRange(author);
         }
 
         public async Task<bool> AuthorExistsAsync(Guid authorId)
@@ -108,6 +114,11 @@ namespace CourseLibrary.Api.Services
             }
 
             _context.Authors.Remove(author);
+        }
+
+        public async Task<IEnumerable<Author>> GetAuthorsWithIdsAsync(IEnumerable<Guid> authorIds)
+        {
+            return await _context.Authors.Where(c => authorIds.Contains(c.Id)).ToListAsync();
         }
 
         public async Task<IEnumerable<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResource)

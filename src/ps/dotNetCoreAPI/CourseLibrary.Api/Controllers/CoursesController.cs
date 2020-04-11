@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using CourseLibrary.Api.Entities;
 using CourseLibrary.Api.Models;
 using CourseLibrary.Api.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -40,8 +41,8 @@ namespace CourseLibrary.Api.Controllers
             return Ok(_mapper.Map<IEnumerable<CourseDto>>(courses));
         }
 
-        [HttpGet("{courseId}")]
-        public async Task<IActionResult> GetCourseForAuthor(Guid authorId,Guid courseId)
+        [HttpGet("{courseId}",Name = "GetCourseForAuthor")]
+        public async Task<IActionResult> GetCourseForAuthor(Guid authorId, Guid courseId)
         {
             var courses = await _courseLibraryRepository.GetCourseAsync(authorId, courseId);
             if (courses == null)
@@ -52,6 +53,24 @@ namespace CourseLibrary.Api.Controllers
             return Ok(_mapper.Map<CourseDto>(courses));
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreateCourseForAuthor(Guid authorId, CourseCreationDto course)
+        {
+            if (!await _courseLibraryRepository.AuthorExistsAsync(authorId))
+            {
+                return NotFound();
+            }
+
+            var courseEntity = _mapper.Map<Course>(course);
+            _courseLibraryRepository.AddCourse(authorId, courseEntity);
+            await _courseLibraryRepository.SaveAsync();
+
+            var courseToReturn = _mapper.Map<CourseDto>(courseEntity);
+
+            return CreatedAtRoute("GetCourseForAuthor", 
+                new { authorId, courseId = courseToReturn.Id},
+                courseToReturn);
+        }
 
     }
 }

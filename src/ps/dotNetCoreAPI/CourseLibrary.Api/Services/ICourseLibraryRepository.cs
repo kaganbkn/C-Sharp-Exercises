@@ -14,10 +14,12 @@ namespace CourseLibrary.Api.Services
         void UpdateCourse(Course course);
         void DeleteCourse(Course course);
         Task<IEnumerable<Author>> GetAuthorsAsync();
+        Task<IEnumerable<Author>> GetAuthorsWithIdsAsync(IEnumerable<Guid> authorIds);
         Task<IEnumerable<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResourceParameters);
         Task<Author> GetAuthorAsync(Guid authorId);
         Task<IEnumerable<Author>> GetAuthorsAsync(IEnumerable<Guid> authorIds);
         void AddAuthor(Author author);
+        void AddAuthorRange(IEnumerable<Author> author);
         void DeleteAuthor(Author author);
         void UpdateAuthor(Author author);
         Task<bool> AuthorExistsAsync(Guid authorId);
