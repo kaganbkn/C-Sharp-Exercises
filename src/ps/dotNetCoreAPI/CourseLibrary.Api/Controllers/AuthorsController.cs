@@ -65,7 +65,7 @@ namespace CourseLibrary.Api.Controllers
                 new { authorId = authorToReturn.Id },
                 authorToReturn);
         }
-
+         
         [HttpOptions]
         public IActionResult GetAuthorsOptions()
         {

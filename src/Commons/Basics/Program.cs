@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Basics.Exceptions;
@@ -57,6 +58,7 @@ namespace Basics
 
         static void Main(string[] args)
         {
+            var dateTime = DateTime.ParseExact("Pazar, 12 Nisan 2020", "dddd, dd MMMM yyyy", CultureInfo.CreateSpecificCulture("tr"));
 
             // "Random"
 

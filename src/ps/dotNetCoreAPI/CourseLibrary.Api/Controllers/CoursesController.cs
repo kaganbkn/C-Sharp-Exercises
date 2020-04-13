@@ -72,5 +72,28 @@ namespace CourseLibrary.Api.Controllers
                 courseToReturn);
         }
 
+        [HttpPut("{courseId}")]
+        public async Task<IActionResult> UpdateCourseForAuthor(Guid courseId, Guid authorId,CourseForUpdateDto courseForUpdate)
+        {
+            var course = await _courseLibraryRepository.GetCourseAsync(authorId, courseId);
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            _mapper.Map(courseForUpdate, course);  // We directly map that two object without any definition in AutoMapperProfile.cs
+
+            //  We don't need to Update function because we already update the entity with mapper.
+            // _courseLibraryRepository.UpdateCourse(course);
+
+            await _courseLibraryRepository.SaveAsync();
+
+            var courseToReturn = _mapper.Map<CourseDto>(course);
+            
+            // Usually returned NoContent() or Ok() in put request.
+            return CreatedAtRoute("GetCourseForAuthor",
+                new { authorId, courseId},
+                courseToReturn);
+        }
     }
 }
