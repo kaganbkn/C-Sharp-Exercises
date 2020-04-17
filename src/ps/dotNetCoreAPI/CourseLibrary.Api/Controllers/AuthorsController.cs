@@ -26,10 +26,13 @@ namespace CourseLibrary.Api.Controllers
         }
 
         [HttpGet]
-        [HttpHead]
         public async Task<IActionResult> GetAuthors([FromQuery] AuthorsResourceParameters authorsResourceParameters)
         // we must add [FromQuery(Name = "category")] here because its a complex type otherwise we don't need it.
         {
+
+            // Get header value
+            //var headerValue = Request.Headers["example"];
+
             var authors = await _courseLibraryRepository.GetAuthorsAsync(authorsResourceParameters);
             var authorsDto = _mapper.Map<IEnumerable<AuthorDto>>(authors);
             return Ok(authorsDto);
@@ -71,6 +74,26 @@ namespace CourseLibrary.Api.Controllers
         {
             Response.Headers.Add("Allow", "GET,POST,OPTIONS");
             return Ok();
+        }
+
+        [HttpDelete("{authorId}")]
+        public async Task<IActionResult> DeleteAuthor(Guid authorId)
+        {
+            var authorEntity = await _courseLibraryRepository.GetAuthorAsync(authorId);
+            if (authorEntity == null)
+            {
+                return NotFound();
+            }
+
+            var courses=await _courseLibraryRepository.GetCoursesAsync(authorId); // We delete all author's courses.
+            courses.ToList().ForEach(c =>
+            {
+                _courseLibraryRepository.DeleteCourse(c);
+            });
+            
+            _courseLibraryRepository.DeleteAuthor(authorEntity);
+            await _courseLibraryRepository.SaveAsync();
+            return NoContent();
         }
     }
 }
