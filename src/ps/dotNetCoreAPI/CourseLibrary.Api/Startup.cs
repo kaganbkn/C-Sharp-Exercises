@@ -28,9 +28,12 @@ namespace CourseLibrary.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddResponseCaching();
             services.AddControllers(setupAction =>
             {
                 setupAction.ReturnHttpNotAcceptable = true; // This parameter handle acceptable format(i.e : app/json,app/xml) our api and return error(406).
+                setupAction.CacheProfiles.Add("240SecondsCacheProfile", new CacheProfile { Duration = 240 });
             })
             .AddNewtonsoftJson(setupAction => // If we change the order then we change default response type.
                 {
@@ -126,6 +129,8 @@ namespace CourseLibrary.Api
                 });
             }
 
+            app.UseResponseCaching();
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -134,6 +139,8 @@ namespace CourseLibrary.Api
             {
                 endpoints.MapControllers();
             });
+
+            // We can use E-Tags for Cache validation and Concurreny operation. Also we can use Marvin.Cache.Headers package from Nuget.
         }
     }
 }

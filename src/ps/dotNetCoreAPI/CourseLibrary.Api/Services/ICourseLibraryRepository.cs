@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CourseLibrary.Api.Entities;
+using CourseLibrary.Api.Helpers;
 using CourseLibrary.Api.ResourceParameters;
 
 namespace CourseLibrary.Api.Services
@@ -15,7 +16,7 @@ namespace CourseLibrary.Api.Services
         void DeleteCourse(Course course);
         Task<IEnumerable<Author>> GetAuthorsAsync();
         Task<IEnumerable<Author>> GetAuthorsWithIdsAsync(IEnumerable<Guid> authorIds);
-        Task<IEnumerable<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResourceParameters);
+        PagedList<Author> GetAuthors(AuthorsResourceParameters authorsResourceParameters);
         Task<Author> GetAuthorAsync(Guid authorId);
         Task<IEnumerable<Author>> GetAuthorsAsync(IEnumerable<Guid> authorIds);
         void AddAuthor(Author author);

@@ -17,6 +17,7 @@ namespace CourseLibrary.Api.Controllers
 {
     [ApiController]
     [Route("api/authors/{authorId}/courses")]
+    [ResponseCache(CacheProfileName = "240SecondsCacheProfile")]
     public class CoursesController : ControllerBase
     {
         private readonly ICourseLibraryRepository _courseLibraryRepository;
@@ -28,7 +29,8 @@ namespace CourseLibrary.Api.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "GetCoursesForAuthor")]
+        [ResponseCache(Duration = 120)] // We also add middleware
         public async Task<ActionResult<IEnumerable<CourseDto>>> GetCoursesForAuthor(Guid authorId)
         {
             // Handling Faults 
@@ -59,7 +61,7 @@ namespace CourseLibrary.Api.Controllers
             return Ok(_mapper.Map<CourseDto>(courses));
         }
 
-        [HttpPost]
+        [HttpPost(Name = "CreateCourseForAuthor")]
         public async Task<IActionResult> CreateCourseForAuthor(Guid authorId, CourseCreationDto course)
         {
             if (!await _courseLibraryRepository.AuthorExistsAsync(authorId))
@@ -141,13 +143,13 @@ namespace CourseLibrary.Api.Controllers
                 var createCourse = new CourseForUpdateDto();
 
                 patchDocument.ApplyTo(createCourse, ModelState);
-                
+
                 if (!TryValidateModel(createCourse))
                 {
                     return ValidationProblem(ModelState);
                 }
 
-                var courseToCreateEntity=_mapper.Map<Course>(createCourse);
+                var courseToCreateEntity = _mapper.Map<Course>(createCourse);
                 courseToCreateEntity.Id = courseId;
 
                 _courseLibraryRepository.AddCourse(authorId, courseToCreateEntity);
@@ -184,7 +186,7 @@ namespace CourseLibrary.Api.Controllers
                 return NotFound();
             }
 
-            var course = await _courseLibraryRepository.GetCourseAsync(authorId, courseId); 
+            var course = await _courseLibraryRepository.GetCourseAsync(authorId, courseId);
             if (course == null)
             {
                 return NotFound();

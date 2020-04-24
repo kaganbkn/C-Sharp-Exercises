@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CourseLibrary.Api.DbContexts;
 using CourseLibrary.Api.Entities;
+using CourseLibrary.Api.Helpers;
 using CourseLibrary.Api.ResourceParameters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp;
@@ -121,22 +122,16 @@ namespace CourseLibrary.Api.Services
             return await _context.Authors.Where(c => authorIds.Contains(c.Id)).ToListAsync();
         }
 
-        public async Task<IEnumerable<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResource)
+        public PagedList<Author> GetAuthors(AuthorsResourceParameters authorsResource)
         {
             if (authorsResource == null)
             {
                 throw new ArgumentNullException(nameof(authorsResource));
             }
 
-            if (string.IsNullOrWhiteSpace(authorsResource.MainCategory) 
-                && string.IsNullOrWhiteSpace(authorsResource.SearchQuery))
-            {
-                return await GetAuthorsAsync();
-            }
-
             //IQueryable<Author> queryableAuthors;
             var collection = _context.Authors as IQueryable<Author>; // Cast operation
-            
+
             if (!string.IsNullOrWhiteSpace(authorsResource.MainCategory)) //filter
             {
                 var mainCategory = authorsResource.MainCategory.Trim();
@@ -151,7 +146,21 @@ namespace CourseLibrary.Api.Services
                 || c.MainCategory.Contains(searchQuery));
             }
 
-            return await collection.ToListAsync();
+            if (!string.IsNullOrWhiteSpace(authorsResource.OrderBy))
+            {
+                if (authorsResource.OrderBy.ToLower() == "name")
+                {
+                    collection = collection.OrderBy(c => c.FirstName).ThenBy(c => c.LastName);
+                }
+            }
+
+            var pagedSource = PagedList<Author>.Create(collection, authorsResource.PageNumber, authorsResource.PageSize);
+            return pagedSource;
+
+            //// paging
+            //collection = collection.Skip(authorsResource.PageSize * (authorsResource.PageNumber - 1))
+            //    .Take(authorsResource.PageSize);
+            //return await collection.ToListAsync();
         }
 
         public async Task<Author> GetAuthorAsync(Guid authorId)

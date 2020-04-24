@@ -10,5 +10,6 @@ namespace CourseLibrary.Api.Models
         public string Name { get; set; }
         public int Age { get; set; }
         public string MainCategory { get; set; }
+        public IEnumerable<LinkDto> Links { get; set; }
     }
 }
