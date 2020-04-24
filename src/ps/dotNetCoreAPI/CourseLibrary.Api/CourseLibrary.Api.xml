@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CourseLibrary.Api</name>
+    </assembly>
+    <members>
+        <member name="M:CourseLibrary.Api.Controllers.AuthorsController.GetAuthor(System.Guid)">
+            <summary>
+            Get an author by his/her id
+            </summary>
+            <param name="authorId">The id of the author you want to get</param>
+            <returns>An author with id,firstname and lastname fields</returns>
+        </member>
+    </members>
+</doc>

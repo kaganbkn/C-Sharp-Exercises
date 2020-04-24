@@ -58,7 +58,12 @@ namespace CourseLibrary.Api.Controllers
             var authorsDto = _mapper.Map<IEnumerable<AuthorDto>>(authors);
             return Ok(authorsDto);
         }
-
+        // IncludeXmlComments from Startup.cs
+        /// <summary>
+        /// Get an author by his/her id
+        /// </summary>
+        /// <param name="authorId">The id of the author you want to get</param>
+        /// <returns>An author with id,firstname and lastname fields</returns>
         [HttpGet("{authorId}", Name = "GetAuthor")]
         public async Task<IActionResult> GetAuthor(Guid authorId)
         {

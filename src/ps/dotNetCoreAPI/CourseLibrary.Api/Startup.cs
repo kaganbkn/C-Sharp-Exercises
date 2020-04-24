@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Reflection;
 using AutoMapper;
 using CourseLibrary.Api.DbContexts;
 using CourseLibrary.Api.Services;
@@ -12,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
 
 namespace CourseLibrary.Api
@@ -24,6 +27,10 @@ namespace CourseLibrary.Api
         }
 
         public IConfiguration Configuration { get; }
+
+        //swagger
+        string _swaggerApiVersion = "v1";
+        string _swaggerTitle = "Library";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -99,6 +106,17 @@ namespace CourseLibrary.Api
 
             services.AddAutoMapper(typeof(Startup));
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(_swaggerApiVersion,
+                    new OpenApiInfo { Title = _swaggerTitle, Version = _swaggerApiVersion });
+
+                var xmlCommentsFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";  // Build -> Output -> XML documentation file
+                var xmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentsFile);
+
+                c.IncludeXmlComments(xmlCommentsFullPath);
+            });
+
             services.AddScoped<ICourseLibraryRepository, CourseLibraryRepository>();
 
             services.AddDbContext<CourseLibraryContext>(options =>
@@ -128,6 +146,20 @@ namespace CourseLibrary.Api
                     });
                 });
             }
+
+
+            //-------------------------------------------------
+            //Swagger
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", _swaggerTitle + " " + _swaggerApiVersion);
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseResponseCaching();
 
