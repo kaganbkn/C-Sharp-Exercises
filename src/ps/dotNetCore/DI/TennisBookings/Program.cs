@@ -21,6 +21,6 @@ namespace TennisBookings
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                });  
     }
 }
