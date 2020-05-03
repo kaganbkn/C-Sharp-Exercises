@@ -9,7 +9,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using TennisBookings.Caching;
 using TennisBookings.Configuration;
+using TennisBookings.DependencyInjection;
 using TennisBookings.Middleware;
 using TennisBookings.Rules;
 using TennisBookings.Services;
@@ -28,26 +31,21 @@ namespace TennisBookings
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IWeatherForecaster, WeatherForecaster>();
-            services.AddTransient<IWeatherForecaster, AmazingWeatherForecaster>();  // The request is handled by last registered class. But two definition is registered the interface.
-            services.TryAddTransient<IWeatherForecaster, AmazingWeatherForecaster>();  // If there is no registered service in interface, TryAdd() is ran.
-            services.Replace(ServiceDescriptor.Transient<IWeatherForecaster, AmazingWeatherForecaster>()); // Its removed previous.
-            // services.RemoveAll<IWeatherForecaster>();
 
-
-            services.AddSingleton<INumberRules, CanNotBeLessThanZero>();
-            services.AddSingleton<INumberRules, CanNotBeEqualToZero>();
-            services.AddSingleton<INumberRules, CanNotBeGreaterThanTen>();
-            // We can also use above function to avoid duplications for registered a service.
-            //services.TryAddEnumerable(ServiceDescriptor.Singleton<INumberRules, CanNotBeGreaterThanTen>());
-
-            //services.AddTransient<GuidGenerator>();
-            //services.AddScoped<GuidGenerator>();
-            //services.AddSingleton<GuidGenerator>();
-
-            services.Configure<FeaturesConfiguration>(Configuration.GetSection("Features"));
+            services.AddAppConfiguration(Configuration)
+                .AddWeatherService()
+                .AddNumberRuleService()
+                .AddCachingService()
+                .AddGuidService();
 
             services.AddControllersWithViews();
+            
+
+            /*
+            services.TryAddSingleton<CanNotBeGreaterThanTen>();
+            services.AddTransient<IIncreaseNumber>(sp => sp.GetRequiredService<CanNotBeGreaterThanTen>());
+            services.AddTransient<INumberRules>(sp => sp.GetRequiredService<CanNotBeGreaterThanTen>());
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

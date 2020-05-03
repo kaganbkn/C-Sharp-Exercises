@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TennisBookings.Caching;
 using TennisBookings.Configuration;
 using TennisBookings.Middleware;
 using TennisBookings.Models;
@@ -19,18 +20,21 @@ namespace TennisBookings.Controllers
         private readonly FeaturesConfiguration _featuresConfiguration;
       //  private readonly GuidGenerator _guidGenerator;
         private readonly ILogger<HomeController> _logger;
+        private readonly IDistributedCache<WeatherResult> _cache;
 
         public HomeController(IWeatherForecaster weatherForecaster,
             IOptions<FeaturesConfiguration> options, 
             //GuidGenerator guidGenerator,
-            ILogger<HomeController> logger)
+            ILogger<HomeController> logger,
+            IDistributedCache<WeatherResult> cache)
         {
             _weatherForecaster = weatherForecaster;
             _featuresConfiguration = options.Value;
            // _guidGenerator = guidGenerator;
             _logger = logger;
+            _cache = cache;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
            // _logger.LogInformation("Guid : {0}",_guidGenerator.Guid);
 
@@ -38,9 +42,18 @@ namespace TennisBookings.Controllers
 
             if (_featuresConfiguration.EnableWeatherForecast)
             {
-                var currentWeather = _weatherForecaster.GetCurrentWeather();
 
-                switch (currentWeather.WeatherCondition)
+                var cacheKey = $"current_weather_{DateTime.UtcNow:yyyy_MM_dd}";
+
+                var (isCached, forecast) = await _cache.TryGetValueAsync(cacheKey);
+
+                if (!isCached)
+                {
+                    forecast = _weatherForecaster.GetCurrentWeather();
+                    await _cache.SetAsync(cacheKey, forecast, 60);
+                }
+
+                switch (forecast.WeatherCondition)
                 {
                     case WeatherCondition.Sun:
                         viewModel.WeatherDescription = "It's sunny right now. " +

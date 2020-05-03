@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TennisBookings.Rules
 {
-    public class CanNotBeGreaterThanTen:INumberRules
+    public class CanNotBeGreaterThanTen:INumberRules,IIncreaseNumber
     {
         public bool Validate(int input)
         {
@@ -13,5 +13,14 @@ namespace TennisBookings.Rules
         }
 
         public string ErrorMessage => "Value cannot be greater than Ten.";
+        public int Increase(int value)
+        {
+            return value + 1;
+        }
+    }
+
+    public interface IIncreaseNumber
+    {
+        int Increase(int value);
     }
 }

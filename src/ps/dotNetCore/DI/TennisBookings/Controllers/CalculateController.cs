@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TennisBookings.Configuration;
 using TennisBookings.Models;
 using TennisBookings.Rules;
 
@@ -11,11 +12,14 @@ namespace TennisBookings.Controllers
     public class CalculateController : Controller
     {
         private readonly IEnumerable<INumberRules> _numberRules;
+        private readonly IValidationConfiguration _validationConfiguration;
 
-        public CalculateController(IEnumerable<INumberRules> numberRules)
+        public CalculateController(IEnumerable<INumberRules> numberRules, IValidationConfiguration validationConfiguration)
         {
             _numberRules = numberRules;
+            _validationConfiguration = validationConfiguration;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -25,16 +29,21 @@ namespace TennisBookings.Controllers
         {
 
             var validationErrors=new List<string>();
-            foreach (var rule in _numberRules)
+
+            if (_validationConfiguration.Calculate)
             {
-                if (!rule.Validate(input.Number))
+                foreach (var rule in _numberRules)
                 {
-                    validationErrors.Add(rule.ErrorMessage);
+                    if (!rule.Validate(input.Number))
+                    {
+                        validationErrors.Add(rule.ErrorMessage);
+                    }
+
                 }
 
             }
 
-            if(!validationErrors.Any())
+            if (!validationErrors.Any())
                 validationErrors.Add("Value is valid.");
 
             var returnToValidationErrors = string.Join("\n", validationErrors);
