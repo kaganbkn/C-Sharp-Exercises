@@ -69,7 +69,7 @@ namespace TennisBookings
 
             app.UseAuthorization();
             
-            //app.UseMiddleware<CustomMiddleware>();  // Middleware order is important. Custom middleware should be this order.
+            app.UseMiddleware<CustomMiddleware>();  // Middleware order is important. Custom middleware should be this order.
 
             app.UseEndpoints(endpoints =>
             {

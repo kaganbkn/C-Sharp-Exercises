@@ -12,16 +12,23 @@ namespace TennisBookings.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<CustomMiddleware> _logger;
+        //private readonly IWeatherForecaster _weatherForecaster;
 
-        public CustomMiddleware(RequestDelegate next, ILogger<CustomMiddleware> logger)
+        public CustomMiddleware(RequestDelegate next,
+            ILogger<CustomMiddleware> logger)
+            // ,IWeatherForecaster weatherForecaster )
         {
             _next = next;
             _logger = logger;
+            //_weatherForecaster = weatherForecaster;
         }
 
-        public async Task InvokeAsync(HttpContext context, GuidGenerator guid)
+        // We shouldn't inject short life services (scoped,transient) via constructor in middleware.
+        // We use middleware injection with Invoke() or InvokeAsync() methods.
+        public async Task InvokeAsync(HttpContext context, GuidGenerator guid, IWeatherForecaster weatherForecaster) // Middleware Injection
         {
-            _logger.LogInformation("Guid : {0}", guid.Guid);
+            var sky = weatherForecaster.GetCurrentWeather().WeatherCondition;
+            _logger.LogInformation("Guid : {0} and Sky will be {1}", guid.Guid, sky);
             _next.Invoke(context);
         }
     }

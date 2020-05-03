@@ -17,7 +17,9 @@ namespace TennisBookings.DependencyInjection
             services.AddTransient<IWeatherForecaster, AmazingWeatherForecaster>();  // The request is handled by last registered class. But two definition is registered the interface.
             services.TryAddTransient<IWeatherForecaster, AmazingWeatherForecaster>();  // If there is no registered service in interface, TryAdd() is ran.
             services.Replace(ServiceDescriptor.Transient<IWeatherForecaster, WeatherForecaster>()); // Its removed previous.
-            // services.RemoveAll<IWeatherForecaster>();
+            services.RemoveAll<IWeatherForecaster>();
+
+            services.AddScoped<IWeatherForecaster, WeatherForecaster>();
 
             return services;
         }

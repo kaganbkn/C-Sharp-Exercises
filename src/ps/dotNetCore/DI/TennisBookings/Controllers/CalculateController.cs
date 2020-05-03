@@ -12,25 +12,25 @@ namespace TennisBookings.Controllers
     public class CalculateController : Controller
     {
         private readonly IEnumerable<INumberRules> _numberRules;
-        private readonly IValidationConfiguration _validationConfiguration;
 
-        public CalculateController(IEnumerable<INumberRules> numberRules, IValidationConfiguration validationConfiguration)
+        public CalculateController(IEnumerable<INumberRules> numberRules)
         {
             _numberRules = numberRules;
-            _validationConfiguration = validationConfiguration;
         }
 
         public IActionResult Index()
         {
             return View();
         }
+
+        // Action Injection --> I.E : If our services are used only one action ...
         [HttpPost]
-        public IActionResult Index(CalculateViewModel input)
+        public IActionResult Index(CalculateViewModel input, [FromServices]IValidationConfiguration validationConfiguration)  // Action Injection 
         {
 
-            var validationErrors=new List<string>();
+            var validationErrors = new List<string>();
 
-            if (_validationConfiguration.Calculate)
+            if (validationConfiguration.Calculate)
             {
                 foreach (var rule in _numberRules)
                 {

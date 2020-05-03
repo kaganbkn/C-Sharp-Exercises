@@ -3,16 +3,24 @@
     ViewData["Title"] = "Welcome to our Tennis Club";
 }
 
+@using Configuration
+@using Microsoft.Extensions.Options
+@inject IOptions<FeaturesConfiguration> Features
+
 <h1>@ViewData["Title"]</h1>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="alert alert-info" role="alert">
-            <h4>How's the weather?</h4>
-            <p>@Model.WeatherDescription</p>
+@if (Features.Value.EnableWeatherForecast)
+{
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-info" role="alert">
+                <h4>How's the weather?</h4>
+                <p>@Model.WeatherDescription</p>
+            </div>
         </div>
     </div>
-</div>
+}
 
 <div class="row">
     <div class="col-md-12">
