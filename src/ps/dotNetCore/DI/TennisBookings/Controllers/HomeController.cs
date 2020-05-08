@@ -21,26 +21,36 @@ namespace TennisBookings.Controllers
       //  private readonly GuidGenerator _guidGenerator;
         private readonly ILogger<HomeController> _logger;
         private readonly IDistributedCache<WeatherResult> _cache;
+        private SecondFeaturesConfiguration _secondFeatures;
 
         public HomeController(IWeatherForecaster weatherForecaster,
-            IOptions<FeaturesConfiguration> options, 
+            IOptionsSnapshot<FeaturesConfiguration> options, // If we use IOptionsSnapshot, the configuration registered with scoped not singleton.
             //GuidGenerator guidGenerator,
             ILogger<HomeController> logger,
-            IDistributedCache<WeatherResult> cache)
+            IDistributedCache<WeatherResult> cache,
+            IOptionsMonitor<SecondFeaturesConfiguration> secondFeatures)
         {
             _weatherForecaster = weatherForecaster;
             _featuresConfiguration = options.Value;
            // _guidGenerator = guidGenerator;
             _logger = logger;
             _cache = cache;
+            _secondFeatures = secondFeatures.CurrentValue;
+
+            // IOptionsMonitor also provide us OnChange() method.
+            secondFeatures.OnChange(config =>
+            {
+                _secondFeatures = config;
+                _logger.LogInformation("The greeting configuration has been updated.");
+            });
         }
-        public async Task<IActionResult> Index()
+        public async Task<ViewResult> Index()
         {
            // _logger.LogInformation("Guid : {0}",_guidGenerator.Guid);
 
             var viewModel = new HomeViewModel();
 
-            if (_featuresConfiguration.EnableWeatherForecast)
+            if (_featuresConfiguration.EnableWeatherForecast && _secondFeatures.EnableSecondWeatherForecast)
             {
 
                 var cacheKey = $"current_weather_{DateTime.UtcNow:yyyy_MM_dd}";
@@ -51,6 +61,10 @@ namespace TennisBookings.Controllers
                 {
                     forecast = _weatherForecaster.GetCurrentWeather();
                     await _cache.SetAsync(cacheKey, forecast, 60);
+                }
+                else
+                {
+                    _logger.LogInformation("Value is hit in cache.");
                 }
 
                 switch (forecast.WeatherCondition)

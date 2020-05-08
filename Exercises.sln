@@ -101,18 +101,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookCovers.Api", "src\ps\do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseLibrary.Api", "src\ps\dotNetCoreAPI\CourseLibrary.Api\CourseLibrary.Api.csproj", "{446F57E2-20B7-4363-A203-6A1230C41E76}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{583B8894-A873-4DA9-B68D-5F04A25FE8B9}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotNetCore", "dotNetCore", "{96CFDE70-A8C9-4C73-A6CF-79FEFC643EA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{957E6654-036E-4B7A-9314-9561A64896D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisBookings", "src\ps\dotNetCore\DI\TennisBookings\TennisBookings.csproj", "{8B9C24E8-2A6C-4292-9950-D9D4B5E7976F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TennisBookings", "src\ps\dotNetCore\DI\TennisBookings\TennisBookings.csproj", "{8B9C24E8-2A6C-4292-9950-D9D4B5E7976F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisBookings.Test", "src\ps\dotNetCore\DI\TennisBookings.Test\TennisBookings.Test.csproj", "{6459E784-B73A-46B2-BCF7-01320505D37C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TennisBookings.Test", "src\ps\dotNetCore\DI\TennisBookings.Test\TennisBookings.Test.csproj", "{6459E784-B73A-46B2-BCF7-01320505D37C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

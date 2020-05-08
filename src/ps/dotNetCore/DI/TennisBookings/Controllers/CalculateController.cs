@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using TennisBookings.Configuration;
 using TennisBookings.Models;
 using TennisBookings.Rules;
@@ -12,10 +13,13 @@ namespace TennisBookings.Controllers
     public class CalculateController : Controller
     {
         private readonly IEnumerable<INumberRules> _numberRules;
+        private readonly SecondValidationConfiguration _secondValidation;
 
-        public CalculateController(IEnumerable<INumberRules> numberRules)
+        public CalculateController(IEnumerable<INumberRules> numberRules,
+            IOptions<SecondValidationConfiguration> secondValidation)
         {
             _numberRules = numberRules;
+            _secondValidation = secondValidation.Value;
         }
 
         public IActionResult Index()
@@ -30,7 +34,7 @@ namespace TennisBookings.Controllers
 
             var validationErrors = new List<string>();
 
-            if (validationConfiguration.Calculate)
+            if (validationConfiguration.Calculate && _secondValidation.CalculateSecond == "true")
             {
                 foreach (var rule in _numberRules)
                 {

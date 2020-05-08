@@ -38,6 +38,8 @@ namespace TennisBookings
                 .AddCachingService()
                 .AddGuidService();
 
+            services.AddHostedService<ValidateOptionsService>(); // We add this because we don't want to run app if configuration is fault.
+
             services.AddControllersWithViews();
             
 

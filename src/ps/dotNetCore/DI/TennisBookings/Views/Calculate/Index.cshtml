@@ -1,13 +1,37 @@
-﻿@model TennisBookings.Models.CalculateViewModel
+﻿@using Microsoft.Extensions.Options
+@using TennisBookings.Configuration
+@model TennisBookings.Models.CalculateViewModel
 
 @{
     ViewData["Title"] = "Index";
 }
+@inject IOptions<PersonConfiguration> Person
+
 
 <h2>Index</h2>
 
 <h4>CalculateViewModel</h4>
 <hr />
+
+@if (Person.Value.IsEnable)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="@Person.Value.Name" class="control-label"></label>
+                <input asp-for="@Person.Value.Name" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="@Person.Value.Age" class="control-label"></label>
+                <input asp-for="@Person.Value.Age" class="form-control" />
+            </div>
+        </div>
+    </div>
+}
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Index">
