@@ -31,7 +31,7 @@ namespace TennisBookings.Test
             weatherResult.Setup(c => c.TryGetValueAsync(It.IsAny<string>()))
                 .ReturnsAsync((false, new WeatherResult
                 {
-                    WeatherCondition = WeatherCondition.Sun
+                    WeatherCondition = It.IsAny<WeatherCondition>()
                 }));
 
             var mockLogger = new Mock<ILogger<HomeController>>();
@@ -63,7 +63,7 @@ namespace TennisBookings.Test
             var mockWeatherForecaster = new Mock<IWeatherForecaster>();
             mockWeatherForecaster.Setup(c => c.GetCurrentWeather()).Returns(new WeatherResult
             {
-                WeatherCondition = WeatherCondition.Rain
+                WeatherCondition = It.IsAny<WeatherCondition>()
             });
 
             var featuresOptions = new Mock<IOptionsSnapshot<FeaturesConfiguration>>();
@@ -77,7 +77,7 @@ namespace TennisBookings.Test
             var weatherResult = new Mock<IDistributedCache<WeatherResult>>();
             weatherResult.Setup(c => c.TryGetValueAsync(It.IsAny<string>()))
                 .ReturnsAsync((true, new WeatherResult
-                {
+                { 
                     WeatherCondition = WeatherCondition.Rain
                 }));
 

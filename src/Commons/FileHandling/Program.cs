@@ -14,7 +14,7 @@ namespace FileHandling
                 while ((line = reader.ReadLine()) != null)
                 {
                     Console.WriteLine(line);
-                }                
+                }
             }
 
             // reader.Dispose(); --> Using kullanmasaydık bu şekilde dispose edebilirdik.
@@ -31,11 +31,23 @@ namespace FileHandling
 
         static void Main(string[] args)
         {
+            var linePath = "C:\\licensesssss.txt";
+            var lines = File.ReadAllLines(linePath);
+            var newLines = new List<string>();
+            foreach (var line in lines)
+            {
+                newLines.Add("|" + line + "|");
+            }
+
+            File.WriteAllLines(linePath, newLines);
+
+            Console.Read();
+
             // "Path"
-            
+
             string tempPath = Path.GetTempPath();
             string tempName = Path.GetTempFileName();
-            Console.WriteLine("Full Path : "+Path.Combine(tempPath,tempName));
+            Console.WriteLine("Full Path : " + Path.Combine(tempPath, tempName));
 
             string path = "C:\\stagelist.txt";
             string extension = Path.GetExtension(path);
@@ -61,18 +73,18 @@ namespace FileHandling
                 file.Add(line);
                 Console.WriteLine(line);
             }
-            
+
             string allFile = File.ReadAllText(@"C:\Workspace\C#\C-Sharp-Exercises\README.md");
 
-            File.WriteAllText(@"C:\Workspace\C#\C-Sharp-Exercises\Example.txt","Example");
+            File.WriteAllText(@"C:\Workspace\C#\C-Sharp-Exercises\Example.txt", "Example");
             ReadLines();
 
-            File.WriteAllLines(@"C:\Workspace\C#\C-Sharp-Exercises\Example.txt",file);
+            File.WriteAllLines(@"C:\Workspace\C#\C-Sharp-Exercises\Example.txt", file);
             ReadLines();
 
             File.AppendAllText(@"C:\Workspace\C#\C-Sharp-Exercises\Example.txt", "Appended Line");
             ReadLines();
-            
+
             // byte[] img=File.ReadAllBytes(@"C:\Workspace\C#\C-Sharp-Exercises\Example.img");
 
             CopyTo(@"C:\Users\kagan.beken\Desktop\New folder (3)\NativeDlls", @"C:\Users\kagan.beken\Desktop\New folder (3)\New folder", true);
