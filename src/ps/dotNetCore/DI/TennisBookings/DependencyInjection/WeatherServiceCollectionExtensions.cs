@@ -19,7 +19,7 @@ namespace TennisBookings.DependencyInjection
             services.Replace(ServiceDescriptor.Transient<IWeatherForecaster, WeatherForecaster>()); // Its removed previous.
             services.RemoveAll<IWeatherForecaster>();
 
-            services.AddScoped<IWeatherForecaster, WeatherForecaster>();
+            services.AddSingleton<IWeatherForecaster, WeatherForecaster>();
 
             return services;
         }

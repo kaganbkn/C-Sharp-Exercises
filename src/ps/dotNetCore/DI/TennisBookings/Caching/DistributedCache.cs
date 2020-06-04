@@ -37,10 +37,10 @@ namespace TennisBookings.Caching
             return cachedResult == null ? default : DeserialiseFromString(cachedResult);
         }
 
-        public async Task SetAsync(string key, T item, int minutesToCache)
+        public async Task SetAsync(string key, T item, int secondsToCache)
         {
             var cacheEntryOptions = new DistributedCacheEntryOptions
-            { AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(minutesToCache) };
+            { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(secondsToCache) };
 
             var serialisedItemToCache = SerialiseForCaching(item);
 

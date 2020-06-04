@@ -17,5 +17,11 @@ namespace TennisBookings.Services
                 WeatherCondition = WeatherCondition.Sun
             };
         }
+
+        public int GetCurrentDegree()
+        {
+            var rand = new Random();
+            return rand.Next(0, 30);
+        }
     }
 }

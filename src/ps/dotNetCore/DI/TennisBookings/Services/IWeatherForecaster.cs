@@ -3,5 +3,6 @@
     public interface IWeatherForecaster
     {
         WeatherResult GetCurrentWeather();
+        int GetCurrentDegree();
     }
 }

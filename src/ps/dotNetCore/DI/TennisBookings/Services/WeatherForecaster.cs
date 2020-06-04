@@ -1,4 +1,6 @@
-﻿namespace TennisBookings.Services
+﻿using System;
+
+namespace TennisBookings.Services
 {
     public class WeatherForecaster : IWeatherForecaster
     {
@@ -11,6 +13,12 @@
             {
                 WeatherCondition = WeatherCondition.Sun
             };
+        }
+
+        public int GetCurrentDegree()
+        {
+            var rand = new Random();
+            return rand.Next(0, 30);
         }
     }
 }

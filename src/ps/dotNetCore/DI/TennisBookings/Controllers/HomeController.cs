@@ -82,6 +82,8 @@ namespace TennisBookings.Controllers
                                                        "information right now, please check again later.";
                         break;
                 }
+
+                viewModel.Degree = _cache.TryGetValueAsync("degree").Result.Value.Degree;
             }
             return View(viewModel);
         }

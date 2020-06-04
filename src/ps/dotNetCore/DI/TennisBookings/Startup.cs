@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using TennisBookings.BackgroundServices;
 using TennisBookings.Caching;
 using TennisBookings.Configuration;
 using TennisBookings.DependencyInjection;
@@ -41,7 +42,8 @@ namespace TennisBookings
             services.AddHostedService<ValidateOptionsService>(); // We add this because we don't want to run app if configuration is fault.
 
             services.AddControllersWithViews();
-            
+
+            services.AddHostedService<DegreeCacheService>();
 
             /*
             services.TryAddSingleton<CanNotBeGreaterThanTen>();
