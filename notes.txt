@@ -1,4 +1,4 @@
- type argument == generic type
+﻿ type argument == generic type
  
 Process Explorer -- Thread Tracking
 
@@ -11,3 +11,13 @@ callback function
 DP-singleton
 
 ----------------
+
+
+Access Modifiers Types ; 
+-Public : Public olarak tanımlanan öğe, kod bloğunun içinde ve dışında tamamen erişilebilirdir. Yani, hiçbir kısıtlama yoktur.
+-Private : Private olarak tanımlanan öğe, sadece tanımlandığı class’ın içerisinde erişilebilirdir. En katı erişim belirleyicidir.
+-Protected : Protected olarak tanımlanan öğe, sadece tanımlandığı class’ın içinde ve o class’tan türetilmiş diğer class’ların içinde erişilebilirdir.
+-Internal : Internal olarak tanımlanan öğe, bulunduğu assembly’nin (Dll veya Exe dosyası) içinde erişilebilirdir. Dll veya Exe dosyasının içerisinde erişim için kısıtlama yoktur, ama dışarıdan erişilemez.
+-Protected Internal : Protected internal erişim belirleyicisi, protected ve internal erişim belirleyicilerinin VEYA (OR) işlemiyle birleştirilmiş halidir. 
+Protected internal olarak tanımlanmış öğe, tanımlandığı class’ın içinde ve o class’tan türetilmiş diğer class’ların içinde erişilebilir. 
+Ayrıca, aynı assembly içinde olmasalar dahi, tanımlandığı class’tan türetilmiş diğer class’ların içinde de erişilebilirdir.

@@ -4,7 +4,12 @@ using System.Text;
 
 namespace dip.src
 {
-    public class EmployeeDataAccess
+    public interface IEmployeeDataAccess
+    {
+        Employee GetEmployeeDetails(int id);
+    }
+
+    public class EmployeeDataAccess : IEmployeeDataAccess
     {
         public Employee GetEmployeeDetails(int id)
         {
