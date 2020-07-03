@@ -16,7 +16,7 @@ namespace EnumerableExample
                 Console.WriteLine(item);
             }
         }
-        public static IEnumerable<string> Days()
+        public static IEnumerable Days()
         {
             yield return "Monday";
             yield return "Tuesday";

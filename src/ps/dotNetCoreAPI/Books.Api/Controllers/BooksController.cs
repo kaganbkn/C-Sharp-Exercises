@@ -20,11 +20,13 @@ namespace Books.Api.Controllers
     {
         private readonly IBookRepository _bookRepository;
         private readonly IMapper _mapper;
+        private readonly IServiceProvider _serviceProvider;
 
-        public BooksController(IBookRepository bookRepository, IMapper mapper)
+        public BooksController(IBookRepository bookRepository, IMapper mapper, IServiceProvider serviceProvider)
         {
             _bookRepository = bookRepository;
             _mapper = mapper;
+            _serviceProvider = serviceProvider;
         }
 
         [HttpGet]
@@ -40,6 +42,11 @@ namespace Books.Api.Controllers
         [BookWithCoversResultFilterAttribute]
         public async Task<IActionResult> GetBook(Guid id) // We don't use the Async signature in method name in controller based on convention.
         {
+
+            // IServiceProvider
+            //var book=(IBookRepository)_serviceProvider.GetService(typeof(IBookRepository));
+            //var bookEntity1 = await book.GetBookAsync(id);
+
             var bookEntity = await _bookRepository.GetBookAsync(id);
             //var newBookEntity = _mapper.Map<BookListDto>(bookEntity);
             if (bookEntity == null)

@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.SqlClient">
+      <HintPath>..\..\..\..\..\..\Users\kagan.beken\.nuget\packages\microsoft.data.sqlclient\1.0.19249.1\ref\netcoreapp2.1\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

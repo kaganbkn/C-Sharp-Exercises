@@ -13,7 +13,7 @@
 - Constraints in Generics : https://www.tutorialsteacher.com/csharp/constraints-in-generic-csharp , https://www.hikmetokumus.com/makale/150/csharp-generic-tiplere-where-ile-kisitlama-getirmek---constraints-on-type-parameters
 - Value vs Referance Type : https://www.tutlane.com/tutorial/csharp/csharp-value-type-and-reference-type-with-examples
 - AutoMapper Summary : https://www.codementor.io/@zedotech/how-to-using-automapper-on-asp-net-core-3-0-via-dependencyinjection-zq497lzsq 
-
+- DDD and Microservices : https://medium.com/devopsturkiye/microservice-mimari-ve-dddnin-bounded-context-kavram%C4%B1-%C3%BCzerine-c5d2ce6f25d8
 
 
 

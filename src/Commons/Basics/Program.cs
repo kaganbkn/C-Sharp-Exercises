@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Basics.Exceptions;
+using Microsoft.Data.SqlClient;
 
 namespace Basics
 {
@@ -58,6 +60,16 @@ namespace Basics
 
         static void Main(string[] args)
         {
+            string asdasd = null;
+            var deneme=new Dictionary<string, string>();
+            deneme.Add("asd", asdasd);
+
+            Console.WriteLine(deneme["asd"]);
+
+            Console.Read();
+            
+            // datetime
+
             var dateTime = DateTime.ParseExact("Pazar, 12 Nisan 2020", "dddd, dd MMMM yyyy", CultureInfo.CreateSpecificCulture("tr"));
 
             // "Random"
@@ -122,7 +134,7 @@ namespace Basics
             // Assign Casdonsole.Title property to string returned by ReadLine.
             Console.Title = Console.ReadLine();
 
-            
+
             try
             {
                 Divider();
@@ -133,7 +145,7 @@ namespace Basics
             }
             catch (ValueIsExceedException e)
             {
-                throw new Exception(e.Message); 
+                throw new Exception(e.Message);
             }
             catch (Exception e)  //this be last one.
             {
@@ -143,13 +155,13 @@ namespace Basics
             {
                 Console.WriteLine("From Finally");
             }
-            
+
 
 
             //Alternative
             //  Lambda : ()=>{}
 
-            HandleException(() =>   
+            HandleException(() =>
             {
                 Divider();
             });
