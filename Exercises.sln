@@ -115,6 +115,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dip", "src\solid\dip\dip.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "src\solid\DesignPatterns\DesignPatterns.csproj", "{A2CA7D5A-2F97-46FA-B2F6-454CB3294890}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frameworkExmp", "src\coreMvc\frameworkExmp\frameworkExmp.csproj", "{5F547AC4-C095-434D-A1B6-169308FDBA17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -277,6 +279,10 @@ Global
 		{A2CA7D5A-2F97-46FA-B2F6-454CB3294890}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2CA7D5A-2F97-46FA-B2F6-454CB3294890}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2CA7D5A-2F97-46FA-B2F6-454CB3294890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F547AC4-C095-434D-A1B6-169308FDBA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F547AC4-C095-434D-A1B6-169308FDBA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F547AC4-C095-434D-A1B6-169308FDBA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F547AC4-C095-434D-A1B6-169308FDBA17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -334,6 +340,7 @@ Global
 		{BFD7A897-4E27-4EA3-82CE-6BBF463C1ECF} = {2D98B713-0741-47A2-9709-ECA922F1C9DC}
 		{A7F60CAC-55EF-47D2-AE2E-5119FDA6A3CB} = {BFD7A897-4E27-4EA3-82CE-6BBF463C1ECF}
 		{A2CA7D5A-2F97-46FA-B2F6-454CB3294890} = {BFD7A897-4E27-4EA3-82CE-6BBF463C1ECF}
+		{5F547AC4-C095-434D-A1B6-169308FDBA17} = {CB8D0F37-EDF3-4DA8-B797-65D746536F71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}

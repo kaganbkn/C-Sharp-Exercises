@@ -26,6 +26,7 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                     @await Component.InvokeAsync("CategoryMenu")
+                    <li><a asp-controller="Customer" asp-action="List">Customer</a></li>
                     <li><a asp-controller="ShoppingCart" asp-action="Index">Shopping Cart</a></li>
                     <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
                     @await Component.InvokeAsync("ShoppingCartSummary")

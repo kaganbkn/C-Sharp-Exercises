@@ -20,6 +20,7 @@ namespace PieShop.Models
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -48,6 +49,14 @@ namespace PieShop.Models
                 ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/cheesecake.jpg", InStock = true,
                 IsPieOfTheWeek = true,
                 ImageThumbnailUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/cheesecakesmall.jpg"
+            });
+            modelBuilder.Entity<Customer>().HasData(new Customer
+            {
+                Id = 1,
+                FullName = "Kağan Beken",
+                Age = 24,
+                Address = "İstanbul",
+                PhoneNumber = "+905466304929"
             });
         }
     }

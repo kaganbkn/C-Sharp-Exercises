@@ -34,6 +34,7 @@ namespace PieShop
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<ShoppingCart>(sp=>ShoppingCart.GetCart(sp)); //the cartId will be created default. //Invoked
+            services.AddScoped<ICustomerRepository,CustomerRepository>();
             services.AddHttpContextAccessor();
             services.AddSession();
             services.AddRazorPages();
