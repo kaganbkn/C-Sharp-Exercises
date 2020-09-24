@@ -14,10 +14,8 @@
 - Value vs Referance Type : https://www.tutlane.com/tutorial/csharp/csharp-value-type-and-reference-type-with-examples
 - AutoMapper Summary : https://www.codementor.io/@zedotech/how-to-using-automapper-on-asp-net-core-3-0-via-dependencyinjection-zq497lzsq 
 - DDD and Microservices : https://medium.com/devopsturkiye/microservice-mimari-ve-dddnin-bounded-context-kavram%C4%B1-%C3%BCzerine-c5d2ce6f25d8
-
-
-
-
+- Wep Api Testing : https://www.turkayurkmez.com/bir-web-apinin-test-seruvenleri/
+- CQRS : https://medium.com/@ademcatamak/cqrs-command-query-responsibility-segregation-ff544864e0cc , https://medium.com/@berkaybasoz/cqrs-command-query-responsibility-segregation-nedir-fd94882f195e
 
 
 

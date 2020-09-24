@@ -65,6 +65,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documents", "documents", "{
 	ProjectSection(SolutionItems) = preProject
 		notes.txt = notes.txt
 		documents\resources.md = documents\resources.md
+		stek.txt = stek.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gneric", "src\Collections\Gneric\Gneric.csproj", "{BBAA2D31-030C-4DEB-B04F-A4F1E59424D2}"
@@ -116,6 +117,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "src\solid\DesignPatterns\DesignPatterns.csproj", "{A2CA7D5A-2F97-46FA-B2F6-454CB3294890}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frameworkExmp", "src\coreMvc\frameworkExmp\frameworkExmp.csproj", "{5F547AC4-C095-434D-A1B6-169308FDBA17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rabbitMQ", "rabbitMQ", "{2FF75F74-C6A4-4112-B7EE-6D116220EC4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sender", "src\rabbitMQ\Sender\Sender.csproj", "{DD6B1278-5200-41CC-82E0-05F9AFA8F53F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Receiver", "src\rabbitMQ\Receiver\Receiver.csproj", "{DF785B81-B351-4AAC-9688-1F3EF3ABB2FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewTask", "src\rabbitMQ\NewTask\NewTask.csproj", "{05239C87-3464-44B6-80E0-52579657CD5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "src\rabbitMQ\Worker\Worker.csproj", "{F9106AA7-C405-482F-B16D-9BA13550E7FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -283,6 +294,22 @@ Global
 		{5F547AC4-C095-434D-A1B6-169308FDBA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F547AC4-C095-434D-A1B6-169308FDBA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F547AC4-C095-434D-A1B6-169308FDBA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD6B1278-5200-41CC-82E0-05F9AFA8F53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD6B1278-5200-41CC-82E0-05F9AFA8F53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD6B1278-5200-41CC-82E0-05F9AFA8F53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD6B1278-5200-41CC-82E0-05F9AFA8F53F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF785B81-B351-4AAC-9688-1F3EF3ABB2FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF785B81-B351-4AAC-9688-1F3EF3ABB2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF785B81-B351-4AAC-9688-1F3EF3ABB2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF785B81-B351-4AAC-9688-1F3EF3ABB2FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05239C87-3464-44B6-80E0-52579657CD5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05239C87-3464-44B6-80E0-52579657CD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05239C87-3464-44B6-80E0-52579657CD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05239C87-3464-44B6-80E0-52579657CD5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9106AA7-C405-482F-B16D-9BA13550E7FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9106AA7-C405-482F-B16D-9BA13550E7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9106AA7-C405-482F-B16D-9BA13550E7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9106AA7-C405-482F-B16D-9BA13550E7FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -341,6 +368,11 @@ Global
 		{A7F60CAC-55EF-47D2-AE2E-5119FDA6A3CB} = {BFD7A897-4E27-4EA3-82CE-6BBF463C1ECF}
 		{A2CA7D5A-2F97-46FA-B2F6-454CB3294890} = {BFD7A897-4E27-4EA3-82CE-6BBF463C1ECF}
 		{5F547AC4-C095-434D-A1B6-169308FDBA17} = {CB8D0F37-EDF3-4DA8-B797-65D746536F71}
+		{2FF75F74-C6A4-4112-B7EE-6D116220EC4F} = {2D98B713-0741-47A2-9709-ECA922F1C9DC}
+		{DD6B1278-5200-41CC-82E0-05F9AFA8F53F} = {2FF75F74-C6A4-4112-B7EE-6D116220EC4F}
+		{DF785B81-B351-4AAC-9688-1F3EF3ABB2FF} = {2FF75F74-C6A4-4112-B7EE-6D116220EC4F}
+		{05239C87-3464-44B6-80E0-52579657CD5F} = {2FF75F74-C6A4-4112-B7EE-6D116220EC4F}
+		{F9106AA7-C405-482F-B16D-9BA13550E7FD} = {2FF75F74-C6A4-4112-B7EE-6D116220EC4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}
