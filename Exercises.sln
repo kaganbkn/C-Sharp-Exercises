@@ -63,9 +63,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexFull", "src\Commons\Re
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documents", "documents", "{14D2B51A-A6C9-4E02-9356-38C5FCB8EB01}"
 	ProjectSection(SolutionItems) = preProject
-		notes.txt = notes.txt
+		documents\notes.txt = documents\notes.txt
 		documents\resources.md = documents\resources.md
-		stek.txt = stek.txt
+		documents\stek.txt = documents\stek.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gneric", "src\Collections\Gneric\Gneric.csproj", "{BBAA2D31-030C-4DEB-B04F-A4F1E59424D2}"
@@ -127,6 +127,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewTask", "src\rabbitMQ\NewTask\NewTask.csproj", "{05239C87-3464-44B6-80E0-52579657CD5F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "src\rabbitMQ\Worker\Worker.csproj", "{F9106AA7-C405-482F-B16D-9BA13550E7FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "udemy", "udemy", "{E0B1F53D-5B3E-4B98-99FA-7374933FF464}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "eShop", "eShop", "{96966257-1637-44FB-8E0D-F1064A163ECC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AC3636A3-6461-42DF-BD74-24613FA57557}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{C3028A21-3FA4-4AF4-BF13-E9DCECBD5A6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "src\udemy\eShop\src\Catalog\Catalog.API\Catalog.API.csproj", "{7635AA86-10A4-4C4A-832D-8A9807398451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -310,6 +320,10 @@ Global
 		{F9106AA7-C405-482F-B16D-9BA13550E7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9106AA7-C405-482F-B16D-9BA13550E7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9106AA7-C405-482F-B16D-9BA13550E7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7635AA86-10A4-4C4A-832D-8A9807398451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7635AA86-10A4-4C4A-832D-8A9807398451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7635AA86-10A4-4C4A-832D-8A9807398451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7635AA86-10A4-4C4A-832D-8A9807398451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -373,6 +387,11 @@ Global
 		{DF785B81-B351-4AAC-9688-1F3EF3ABB2FF} = {2FF75F74-C6A4-4112-B7EE-6D116220EC4F}
 		{05239C87-3464-44B6-80E0-52579657CD5F} = {2FF75F74-C6A4-4112-B7EE-6D116220EC4F}
 		{F9106AA7-C405-482F-B16D-9BA13550E7FD} = {2FF75F74-C6A4-4112-B7EE-6D116220EC4F}
+		{E0B1F53D-5B3E-4B98-99FA-7374933FF464} = {2D98B713-0741-47A2-9709-ECA922F1C9DC}
+		{96966257-1637-44FB-8E0D-F1064A163ECC} = {E0B1F53D-5B3E-4B98-99FA-7374933FF464}
+		{AC3636A3-6461-42DF-BD74-24613FA57557} = {96966257-1637-44FB-8E0D-F1064A163ECC}
+		{C3028A21-3FA4-4AF4-BF13-E9DCECBD5A6C} = {AC3636A3-6461-42DF-BD74-24613FA57557}
+		{7635AA86-10A4-4C4A-832D-8A9807398451} = {C3028A21-3FA4-4AF4-BF13-E9DCECBD5A6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCCA8F13-6B0E-490C-A9C4-F6DF6FC58F5E}

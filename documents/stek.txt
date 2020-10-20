@@ -47,12 +47,12 @@ sentinel master mymaster
 -------------------------------- Add password
 requirepass=<password>  (master ve slavelerde ayarlanır)
 masterauth <password>     (slave de master'ın şifresini vermek zorundayız)  (master sonnradan slave olabileceği için tüm redislere yazılır.)
-sentinel auth-pass sestek 123qwe (burada sestek adını ilk olarak (sentinel monitor sestek 192.168.10.74 6379 2 ) burada tanımlıyoruz bu yüzden bu satırın en üstte olması gerekiyor. )
+sentinel auth-pass stek 123qwe (burada stek adını ilk olarak (sentinel monitor stek 192.168.10.74 6379 2 ) burada tanımlıyoruz bu yüzden bu satırın en üstte olması gerekiyor. )
 --------------------------------
 Redis makinesine Mremote veya putty programları ile erişilebilir. Mremote için protocol'u SSH version 2 yapmanız gerekli.
 IP :192.168.10.74
 Username: root
-Password:sestek123
+Password:stek123
 "systemctl status redis" komutu ile servisin durumuna bakılır.
 "systemctl stop redis" komutu ile servisin durdurulur. Aynı şekilde start ve restart komutları kullanılabilir.
 Redis configurasyonu /etc/redis.conf dosyası içindedir. More komutu ile açılabilir. Düzenlemek için vim editörü kullanılabilir.
@@ -61,8 +61,8 @@ Loglar (cd) /var/log/redis/ yolu altında.
 Zip dosyaları gunzip komutu ile çıkarılabilir.
 
 Aşağıdaki örnek komut ile logları windows dizininize kaydedebilirsiniz. cmd 'de çalıştırılması yeterlidir.
-pscp -pw sestek123 root@192.168.10.74:/var/log/redis/redis.log C:\Users\kagan.beken\Desktop\deneme
-pscp -pw sestek123 root@192.168.10.74:<linux dosya dizini> <windows klasör dizini>
+pscp -pw stek123 root@192.168.10.74:/var/log/redis/redis.log C:\Users\kagan.beken\Desktop\deneme
+pscp -pw stek123 root@192.168.10.74:<linux dosya dizini> <windows klasör dizini>
 
 Not: admin yetkisi istiyor ise komutlardan önce sudo ön eki kullanmalısınız.
 
