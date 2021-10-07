@@ -1,0 +1,55 @@
+﻿
+------------------------------------------
+hosted service de scope aç lifetime kullan constructurdan yaparsan sürekli bellekte durur
+
+---------------------------------------
+pseudo kod yazarak ilerlersen aslında daha rahat edersin
+şöyle ki. IEmailReader diye bi arayüz hazırlayıp sonra HostedService üzerinde bunu kullan.
+Folder bilgisi lazım olunca MailKit üzerinden değil kendi tanımladığın enum üzerinden falan kullan
+HostedService bitince IEmailReader kısmını implemente et. o zaman Mailkit paketini falan indir
+bu şekilde uygulaman son ana kadar hiçbir pakete bağımlı olmadan geliştirilmiş ıolur
+en son bi concrete sınıf yazarken de paketi alıp o sınıf içinde nasıl saklayacağını çözersin zaten :+1:
+
+-----------------------------
+Not: ExceptionHandling metodu haya yönetimi yapmıyor. Durum kontrolü yapıyor. Bu sebeple CheckAuthenticationState gibi bir isim daha iyi olur. 
+Genel olarak business kural kontrolleri için CheckXXX şeklinde metot isimlendirmelerini görebilirsin.
+------------------
+Execute metodu timer tarafından tetiklenen facade bir metot olarak düşündüm. Hata yönetimi ve iş metodunun çalışması için gereken parametrelerin oluşturulması işini bu metodun içinde yaptım.
+StartEmailReadProcessAsync metodu daha yalın olmuş oldu.
+-------------------
+Not: Tacticle DDD konseptinde entity idleri yerine entity objesinin kendisini parametre olarak talep eder metotlar. Oradan esinlendim  
+-------------------------
+ OOP yönteminde istisnai durumlar haricinde invalid durumda objenin oluşturulmamasını önerir.
+ 
+ 
+  --------------------------------------------------------
+
+Transactional Scope
+inheritance conclute
+decorator pattern
+
+
+                foreach (var bodyPart in message.BodyParts.ToList().Where(c=>c is MessagePart).Select(c=>c as MessagePart))
+                foreach (var bodyPart in message.BodyParts.ToList().OfType<MessagePart>())
+				
+				
+				
+                foreach (var bodyPart in message.BodyParts.ToList().OfType<MessagePart>())
+                {
+                    var headers=bodyPart.Message.Headers;
+                    mimeEntity.Add(bodyPart);
+                    //var asd = (MessagePart)bodyPart;
+                }
+				
+				gönderici adreslerini doğrula
+				hosted service crash ederse nasıl haberimiz olacak
+				
+				
+				
+                    var receiverAddress = spamRelationshipResponseList.Select(x => x.ReceiverEmailAddress);
+                    partialResult = request.Where(x => !receiverAddress.Contains(x.Email));
+					
+decorator-> başına sonuna bir eylem ekle, bir sonraki çağrıları biliyor
+chain of response-> yapamazsa bir sonrakine veriyor
+pipeline->farklı farklı işlerin adımları(loglam,caching vs. hepsi farklı bir şey yapıyor)
+

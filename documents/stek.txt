@@ -52,7 +52,7 @@ sentinel auth-pass stek 123qwe (burada stek adını ilk olarak (sentinel monitor
 Redis makinesine Mremote veya putty programları ile erişilebilir. Mremote için protocol'u SSH version 2 yapmanız gerekli.
 IP :192.168.10.74
 Username: root
-Password:stek123
+Password:pass
 "systemctl status redis" komutu ile servisin durumuna bakılır.
 "systemctl stop redis" komutu ile servisin durdurulur. Aynı şekilde start ve restart komutları kullanılabilir.
 Redis configurasyonu /etc/redis.conf dosyası içindedir. More komutu ile açılabilir. Düzenlemek için vim editörü kullanılabilir.
