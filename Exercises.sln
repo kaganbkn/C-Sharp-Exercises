@@ -63,6 +63,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexFull", "src\Commons\Re
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documents", "documents", "{14D2B51A-A6C9-4E02-9356-38C5FCB8EB01}"
 	ProjectSection(SolutionItems) = preProject
+		adm.txt = adm.txt
 		documents\notes.txt = documents\notes.txt
 		documents\resources.md = documents\resources.md
 		documents\stek.txt = documents\stek.txt
@@ -136,7 +137,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AC3636A3-646
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{C3028A21-3FA4-4AF4-BF13-E9DCECBD5A6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "src\udemy\eShop\src\Catalog\Catalog.API\Catalog.API.csproj", "{7635AA86-10A4-4C4A-832D-8A9807398451}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "src\udemy\eShop\src\Catalog\Catalog.API\Catalog.API.csproj", "{7635AA86-10A4-4C4A-832D-8A9807398451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
